@@ -1,0 +1,16 @@
+@import '../abstracts/_abstract-dir';
+
+.primary-normal-alt {
+    color: $primary;
+    background-color: $white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 40px;
+    cursor: pointer;
+    transition: .3s ease;
+
+    &:hover {
+        color: $white;
+        background-color: $primary;
+    }
+}

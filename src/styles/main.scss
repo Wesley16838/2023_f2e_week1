@@ -1,0 +1,43 @@
+@import './abstracts/_abstract-dir';
+
+.bg {
+    background-color: $blue80;
+    padding-inline: 155px;
+}
+
+.flex-row--start {
+    @include flex($justify: flex-start)
+}
+
+.flex-column--start {
+    @include flex($direction: column, $justify: flex-start, $align: flex-start)
+}
+
+
+.full-height {
+    height: 100vh;
+}
+
+h1 {
+    font-size: $text-h1;
+}
+
+h2 {
+    font-size: $text-h2;
+}
+
+h3 {
+    font-size: $text-h3;
+}
+
+h4 {
+    font-size: $text-h4;
+}
+
+h5 {
+    font-size: $text-h5;
+}
+
+button {
+    font-size: $text-button;
+}

@@ -1,0 +1,75 @@
+/* variables.module.scss */
+
+/// Color
+/// @type Color
+$blue80: #D9E8FF;
+$blue70: #C4CDED;
+$blue60: #A6B4E4;
+$blue50: #869DDA;
+$blue40: #6386D1;
+$blue30: #3670C7;
+$blue20: #38548B;
+$blue10: #313A54;
+
+$orange80: #FFE1D2;
+$orange70: #FFC4A6;
+$orange60: #FFA77B;
+$orange50: #F98950;
+$orange40: #EF6A23;
+$orange30: #B95826;
+$orange20: #854627;
+$orange10: #533425;
+
+$gray80: #FFFFFF;
+$gray70: #DCDCDC;
+$gray60: #B9B9B9;
+$gray50: #989898;
+$gray40: #787878;
+$gray30: #595959;
+$gray20: #3D3D3D;
+$gray10: #222222;
+
+$primary: $blue30;
+$secondary: $orange40;
+$white: $gray80;
+$black: #000000;
+
+/// Size
+/// @type Size
+$text-h1: 40px;
+$text-h2: 32px;
+$text-h3: 24px;
+$text-h4: 22px;
+$text-h5: 18px;
+$text-p-l: 20px;
+$text-p: 18px;
+$text-button: 16px;
+$text-footnote: 15px;
+$text-footnote-s: 14px;
+
+/// Space
+/// @type Space
+$space-0: 0px;
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 16px;
+$space-4: 24px;
+$space-5: 32px;
+$space-6: 48px;
+$space-7: 60px;
+$space-8: 80px;
+$space-9: 120px;
+
+/// Weight
+/// @type Weight
+$bold: 700;
+$normal: 500;
+$thin: 300;
+
+/// Break-Point max-1400, 1400-1200, 1200-992, 992-768, 768-576, 576-min
+/// @type Length
+$BREAKPOINT_EXTRA_EXTRA_LARGE: 1400px;
+$BREAKPOINT_EXTRA_LARGE: 1200px;
+$BREAKPOINT_LARGE: 992px;
+$BREAKPOINT_MEDIUM: 768px;
+$BREAKPOINT_SMALL: 568px;

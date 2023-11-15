@@ -1,0 +1,76 @@
+@import 'variables.module';
+
+/// RWD
+/// @type RWD Device Size
+
+@mixin devices ($breakpoint) {
+    //the name of the mixin is devices
+
+    @if $breakpoint ==doubleextralargedesktop {
+        @media only screen and (max-width: #{$BREAKPOINT_EXTRA_EXTRA_LARGE}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==extralargedesktop {
+        @media only screen and (max-width: #{$BREAKPOINT_EXTRA_LARGE}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==largelaptop {
+        @media only screen and (max-width: #{$BREAKPOINT_LARGE}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==tablet {
+        @media only screen and (max-width: #{$BREAKPOINT_MEDIUM}) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==mobile {
+        @media only screen and (max-width: #{$BREAKPOINT_SMALL}) {
+            @content;
+        }
+    }
+}
+
+/// Flex
+/// @type Flex
+@mixin flex($direction: row, $align: center, $justify: center, $gap: 0px) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: wrap;
+}
+
+/// Grid
+/// @type 
+@mixin grid-container($columns: 3, $gap: 20px) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+
+    // Additional grid properties can be added here
+}
+
+/// Grid
+/// @type 
+@mixin grid-rows($gap, $rows) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: $rows $rows;
+    gap: $gap;
+}
+
+/// Position
+/// @type Position
+@mixin position-vertical--center($position) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}

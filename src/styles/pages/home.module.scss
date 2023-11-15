@@ -1,0 +1,18 @@
+@import '../abstracts/_abstract-dir';
+
+.title-wrapper {
+    position: relative;
+    @include flex($direction: column, $justify: flex-start, $align: flex-start, $gap: $space-4);
+}
+
+.homepage-dog {
+    position: absolute;
+    right: 155px;
+    top: 0px;
+}
+
+.donate-dog {
+    position: absolute;
+    left: 450px;
+    top: 600px;
+}
