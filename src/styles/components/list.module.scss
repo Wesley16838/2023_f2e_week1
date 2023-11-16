@@ -11,10 +11,16 @@
         h5 {
             margin-bottom: $space-1;
         }
+
+        h3,
+        h5 {
+            font-family: 'NotoSansTC-Bold';
+            font-weight: 700;
+        }
     }
 
     .line {
-        margin-block: 24px;
+        margin-block: $space-4;
         border-bottom: 1px solid $black;
     }
 }

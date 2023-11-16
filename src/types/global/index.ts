@@ -5,3 +5,10 @@ export type EventProp = {
     date: string,
     asset: string
 }
+
+export type IssueProp = {
+    id: number,
+    name: string,
+    content: string,
+    asset: string
+}

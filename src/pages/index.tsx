@@ -6,22 +6,27 @@ import Button from '@/components/Button';
 import { ButtonTheme } from '@/constants/enum';
 import Nav from '@/components/Nav';
 import List from '@/components/List';
+import { IssueProp } from '@/types/global';
+import { url } from 'inspector';
 
 export const getServerSideProps = async (context: { locale: any }) => {
   const { locale } = context;
   const file = await fs.readFile(process.cwd() + `/src/_l18n/${locale}.json`, 'utf8');
   const eventfiles = await fs.readFile(process.cwd() + `/src/data/events.${locale}.json`, 'utf8');
+  const issuefiles = await fs.readFile(process.cwd() + `/src/data/issues.${locale}.json`, 'utf8');
   const data = JSON.parse(file);
   const eventData = JSON.parse(eventfiles);
+  const issueData = JSON.parse(issuefiles);
   return {
     props: {
       data,
-      eventData
+      eventData,
+      issueData
     },
   };
 };
 
-export default function Home({ data, eventData }: any) {
+export default function Home({ data, eventData, issueData }: any) {
   const handleOnClick = () => console.log('handleOnClick')
   console.log(eventData)
   return (
@@ -87,8 +92,25 @@ export default function Home({ data, eventData }: any) {
             <List data={eventData} title={data.homepage.eventListTitle} />
           </div>
         </div>
-        <div className={styles["section-three"]}></div>
-        <div className={styles["section-four"]}></div>
+        <div className={styles["section-three"]}>
+          <Image src="/assets/icons/slogan-two.svg" width={553} height={55} className={styles["slogan-image"]} alt="更好的台灣, 一同守護" />
+          <Image src="/assets/images/dog-banner.png" fill className={styles["image"]} alt="背景圖片" />
+        </div>
+        <div className={styles["section-four"]}>
+          <div className={styles["issue-wrapper"]}>
+            {
+              issueData.map(
+                (issue: IssueProp) => {
+                  return <div className={styles["issue-container"]} key={issue.id + issue.name} style={{ backgroundImage: `url(${issue.asset})` }}>
+                    <h4>{issue.name}</h4>
+                    <Button name={data.homepage.knowMoreButtonAction} type={ButtonTheme.SecondaryOutline} onClick={() => { }} />
+                  </div>
+                }
+              )
+            }
+          </div>
+
+        </div>
         <div className={styles["section-five"]}></div>
       </main>
     </>
