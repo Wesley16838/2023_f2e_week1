@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Taipei Pet Forum, advocating for a dog-friendly environment.",
+        "description": "On a hot summer Saturday, I brought my Bull Terrier with stylish sunglasses to the Taipei Pet Forum, ready to promote the idea that dogs can have attitude too! Just like cats, dogs should express their personalities.",
+        "date": "12.26",
+        "asset": "/assets/images/event-dog-1.png"
+    },
+    {
+        "id": 2,
+        "title": "Street-sweeping mode activated! Fellow villagers and elders, let's go together!",
+        "description": "The street atmosphere was amazing! Despite heavy rain, people of all ages, wearing raincoats, participated in the event. It was so heartwarming! This experience reinforced my commitment to advancing the 'dog-friendly environment' policy.",
+        "date": "12.24",
+        "asset": "/assets/images/event-dog-2.png"
+    },
+    {
+        "id": 3,
+        "title": "Shelter Model Showdown!",
+        "description": "Today, the shelter is no longer a place of silence. In order to introduce more people to the furry friends here, we organized an unprecedented 'model runway'!",
+        "date": "12.20",
+        "asset": "/assets/images/event-dog-3.png"
+    }
+]

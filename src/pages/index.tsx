@@ -4,22 +4,26 @@ import { promises as fs } from 'fs'
 import styles from '@/styles/pages/home.module.scss'
 import Button from '@/components/Button';
 import { ButtonTheme } from '@/constants/enum';
+import Nav from '@/components/Nav';
+import List from '@/components/List';
 
 export const getServerSideProps = async (context: { locale: any }) => {
   const { locale } = context;
   const file = await fs.readFile(process.cwd() + `/src/_l18n/${locale}.json`, 'utf8');
+  const eventfiles = await fs.readFile(process.cwd() + `/src/data/events.${locale}.json`, 'utf8');
   const data = JSON.parse(file);
-
+  const eventData = JSON.parse(eventfiles);
   return {
     props: {
       data,
+      eventData
     },
   };
 };
 
-export default function Home({ data }: any) {
+export default function Home({ data, eventData }: any) {
   const handleOnClick = () => console.log('handleOnClick')
-
+  console.log(eventData)
   return (
     <>
       <Head>
@@ -29,7 +33,8 @@ export default function Home({ data }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='bg'>
-        <div className="flex-row--start full-height">
+        <Nav options={data.global.nav} />
+        <div className={styles['section-one']}>
           <div className={styles['title-wrapper']}>
             <Image
               src="/assets/icons/slogan.svg"
@@ -38,7 +43,7 @@ export default function Home({ data }: any) {
               height={192}
               priority
             />
-            <h5>{data.homepage.subtitleFirst}<br />{data.homepage.subtitleSecond}</h5>
+            <h5>{data.homepage.subtitle}</h5>
             <Button name={data.homepage.buttonCandidate} type={ButtonTheme.PrimayNormalAlt} onClick={handleOnClick} />
           </div>
           <Image
@@ -58,6 +63,33 @@ export default function Home({ data }: any) {
             priority
           />
         </div>
+        <div className={styles["section-two"]}>
+          <div className={styles["donate"]}>
+            <div className={styles["donate-content"]}>
+              <h3>{data.homepage.donateTitle}</h3>
+              <p className='secondary body-large'>{data.homepage.donateSubtitle}</p>
+              <p className='footnote gray-40'>{data.homepage.donateTotal}</p>
+            </div>
+            <div className={styles["donate-button-wrapper"]}>
+              <Button name={data.homepage.donateButtonAction} type={ButtonTheme.SecondaryNormal} onClick={() => { }} />
+            </div>
+            <Image className={styles["orange-logo"]} src='assets/icons/logo-orange.svg' width={177} height={247} alt={'Orange Logo'} />
+          </div>
+          <div className={styles["introduction-wrapper"]}>
+            <div className={styles["name-wrapper"]}>
+              <p className={styles["name"]}>{data.homepage.primaryName}</p>
+              <p className={styles["name-alt"]}>({data.homepage.secondaryName})</p>
+            </div>
+            <p className={styles["introduction"]}>{data.homepage.selfIntroductionOne}</p>
+            <p className={styles["introduction"]}>{data.homepage.selfIntroductionTwo}</p>
+          </div>
+          <div className={styles["event"]}>
+            <List data={eventData} title={data.homepage.eventListTitle} />
+          </div>
+        </div>
+        <div className={styles["section-three"]}></div>
+        <div className={styles["section-four"]}></div>
+        <div className={styles["section-five"]}></div>
       </main>
     </>
   )

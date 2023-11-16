@@ -39,13 +39,13 @@
 
 /// Flex
 /// @type Flex
-@mixin flex($direction: row, $align: center, $justify: center, $gap: 0px) {
+@mixin flex($direction: row, $align: center, $justify: center, $gap: 0px, $wrap: wrap) {
     display: flex;
     flex-direction: $direction;
     align-items: $align;
     justify-content: $justify;
     gap: $gap;
-    flex-wrap: wrap;
+    flex-wrap: $wrap;
 }
 
 /// Grid

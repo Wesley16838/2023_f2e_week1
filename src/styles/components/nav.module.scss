@@ -1,0 +1,20 @@
+@import '../abstracts/_abstract-dir';
+
+.nav-wrapper {
+    height: 102px;
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    @include flex($justify: flex-start);
+
+    ul {
+        list-style-type: none;
+        @include flex($gap: 32px, $justify: flex-start);
+
+        li a {
+            color: $primary;
+            font-size: $text-button;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,8 +1,9 @@
 @import './abstracts/_abstract-dir';
 
 .bg {
+    position: relative;
     background-color: $blue80;
-    padding-inline: 155px;
+    @include flex()
 }
 
 .flex-row--start {
@@ -40,4 +41,39 @@ h5 {
 
 button {
     font-size: $text-button;
+}
+
+.footnote {
+    font-size: $text-footnote;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    white-space: pre-line;
+
+    &.primary {
+        color: $primary
+    }
+
+    &.secondary {
+        color: $secondary
+    }
+}
+
+p {
+    &.body {
+        font-size: $text-p;
+    }
+
+    &.body-large {
+        font-size: $text-p-l;
+    }
+}
+
+.gray-40 {
+    color: $gray40;
 }

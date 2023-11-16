@@ -1,9 +1,41 @@
 {
+    "global": {
+        "nav": [
+            {
+                "name": "首頁",
+                "routeName": "/"
+            },
+            {
+                "name": "認識候選人",
+                "routeName": "/candidate"
+            },
+            {
+                "name": "最新活動",
+                "routeName": "/events"
+            },
+            {
+                "name": "政策活動",
+                "routeName": "/policy"
+            },
+            {
+                "name": "小額捐款",
+                "routeName": "/donations"
+            }
+        ]
+    },
     "homepage": {
         "pageTitle": "立委競選官網",
         "title": "堅如鬥牛，捍衛台灣未來!",
-        "subtitleFirst": "我是鬥立翰，堅守正義、追求共融，",
-        "subtitleSecond": "望與人類共同塑造更美好的明天。",
-        "buttonCandidate": "認識候選人"
+        "subtitle": "我是鬥立翰，堅守正義、追求共融，\n望與人類共同塑造更美好的明天。",
+        "buttonCandidate": "認識候選人",
+        "donateTitle": "小額捐款",
+        "donateSubtitle": "您的小筆捐款，\n是每隻毛孩未來的大大動力！",
+        "donateTotal": "目前小額贊助總金額：987,655,873",
+        "donateButtonAction": "我要捐款",
+        "primaryName": "鬥力翰",
+        "secondaryName": "Dog Li-Han",
+        "selfIntroductionOne": "我堅信推動更完善的狗狗福利和相關政策，能間接地發展台灣的未來。畢竟，狗狗療育的存在能幫助改善人民身心健康，進而賺更多的錢，激發工作熱情、推動經濟，為台灣的GDP帶來巨大效益。",
+        "selfIntroductionTwo": "因此，我期望能在立法院推進政策，確保狗狗和人類都能得到最大的福祉。護航台灣的幸福，就從照顧狗狗開始！",
+        "eventListTitle": "最新活動"
     }
 }

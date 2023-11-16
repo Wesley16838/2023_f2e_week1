@@ -14,3 +14,18 @@
         background-color: $primary;
     }
 }
+
+.secondary-normal {
+    color: $white;
+    background-color: $secondary;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 40px;
+    cursor: pointer;
+    transition: .3s ease;
+
+    &:hover {
+        color: $white;
+        background-color: $black;
+    }
+}

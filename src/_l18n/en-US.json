@@ -1,9 +1,41 @@
 {
+    "global": {
+        "nav": [
+            {
+                "name": "Home",
+                "routeName": "/"
+            },
+            {
+                "name": "Meet the Candidate",
+                "routeName": "/candidate"
+            },
+            {
+                "name": "Latest Events",
+                "routeName": "/events"
+            },
+            {
+                "name": "Policy Initiatives",
+                "routeName": "/policy"
+            },
+            {
+                "name": "Small Donations",
+                "routeName": "/donations"
+            }
+        ]
+    },
     "homepage": {
         "pageTitle": "Legislator Election Official Website",
         "title": "As steadfast as a bull, defending Taiwan's future!",
-        "subtitleFirst": "I am Dou Lihan, upholding justice and seeking harmony.",
-        "subtitleSecond": "Hoping to shape a better tomorrow together with humanity.",
-        "buttonCandidate": "Meet the Candidate"
+        "subtitle": "I am Dou Lihan, upholding justice and seeking harmony.\nHoping to shape a better tomorrow together with humanity.",
+        "buttonCandidate": "Meet the Candidate",
+        "donateTitle": "Small Donations",
+        "donateSubtitle": "Your small donation\nis a big source of motivation for the future of every furry friend!",
+        "donateTotal": "The current total amount of small donations:987,655,873",
+        "donateButtonAction": "Donate",
+        "primaryName": "Dog Li-Han",
+        "secondaryName": "鬥力翰",
+        "selfIntroductionOne": "I believe enhancing dog welfare and related policies can contribute to Taiwan's future. Dog therapy improves health, boosts work enthusiasm, stimulates the economy, and benefits GDP.",
+        "selfIntroductionTwo": "Hence, I aim to promote legislative policies ensuring the well-being of both dogs and humans. Safeguarding Taiwan's happiness starts with caring for dogs!",
+        "eventListTitle": "Lastest Events"
     }
 }
