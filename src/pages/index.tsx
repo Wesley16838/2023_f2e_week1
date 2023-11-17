@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { promises as fs } from 'fs'
 import styles from '@/styles/pages/home.module.scss'
 import Button from '@/components/Button';
 import { ButtonTheme } from '@/constants/enum';
@@ -12,26 +11,9 @@ import Marquee from "react-fast-marquee";
 import { useForm } from "react-hook-form";
 import Footer from '@/components/Footer';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-
-export const getServerSideProps = async (context: { locale: any }) => {
-  const { locale } = context;
-  const eventfiles = await fs.readFile(process.cwd() + `/src/data/events.${locale}.json`, 'utf8');
-  const issuefiles = await fs.readFile(process.cwd() + `/src/data/issues.${locale}.json`, 'utf8');
-  const eventData = JSON.parse(eventfiles);
-  const issueData = JSON.parse(issuefiles);
-  return {
-    props: {
-      eventData,
-      issueData
-    },
-  };
-};
+import useFetch from '@/hooks/useFetch';
 
 export default function Home() {
-  const [data, setData] = useState<any>(null);
-  const [eventData, setEventData] = useState<any>(null);
-  const [issueData, setIssueData] = useState<any>(null);
   const handleOnClick = () => console.log('handleOnClick')
   const {
     register,
@@ -40,35 +22,10 @@ export default function Home() {
   } = useForm()
   const router = useRouter();
   const locale = router.locale;
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/_l18n/${locale}.json`);
-        const jsonData = await response.json();
-        setData(jsonData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  const { data } = useFetch(`/_l18n/${locale}.json`)
+  const { data: eventData } = useFetch(`/_l18n/events.${locale}.json`)
+  const { data: issueData } = useFetch(`/_l18n/issues.${locale}.json`)
 
-    fetchData();
-  }, [locale]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const eventsResponse = await fetch(`/_l18n/events.${locale}.json`);
-        const issuesResponse = await fetch(`/_l18n/issues.${locale}.json`);
-        const eventsJsonData = await eventsResponse.json();
-        const issuesJsonData = await issuesResponse.json();
-        setEventData(eventsJsonData);
-        setIssueData(issuesJsonData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, [locale]);
   async function onSubmit(data: any) { }
   return (
     <>
@@ -79,7 +36,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='bg'>
-        <Nav />
+        <Nav data={data} />
         <div className={styles['section-one']}>
           <div className={styles['title-wrapper']}>
             <Image
@@ -220,7 +177,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-        <Footer />
+        <Footer data={data} />
       </main>
     </>
   )

@@ -9,7 +9,7 @@ export type ButtonProps = {
 }
 
 export type NavProps = {
-    options: NavOptionsProp[]
+    data: any
 }
 
 export type NavOptionsProp = {
@@ -22,3 +22,6 @@ export type ListProp = {
     data: EventProp[]
 }
 
+export type FooterProps = {
+    data: any
+}
