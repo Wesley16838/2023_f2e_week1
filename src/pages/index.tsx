@@ -50,7 +50,7 @@ export default function Home({ eventData, issueData }: any) {
     };
 
     fetchData();
-  }, []);
+  }, [locale]);
   async function onSubmit(data: any) { }
   return (
     <>

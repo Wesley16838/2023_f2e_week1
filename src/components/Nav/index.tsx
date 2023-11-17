@@ -21,7 +21,7 @@ const Nav = () => {
         };
 
         fetchData();
-    }, []);
+    }, [locale]);
     return <div className={style['nav-wrapper']}>
         <Image src="/assets/icons/logo.svg" width={38} height={54} alt="Logo" />
         <ul>
