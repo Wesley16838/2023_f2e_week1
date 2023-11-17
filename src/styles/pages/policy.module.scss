@@ -1,0 +1,80 @@
+@import '../abstracts/_abstract-dir';
+
+.policy-picture-container {
+    position: relative;
+    height: 100vh;
+}
+
+.policy-container {
+    background-color: $blue80;
+    padding-left: $space-7;
+    padding-right: 90px;
+    height: 100vh;
+    @include flex($direction: column, $align: flex-start);
+
+    h4 {
+        margin-bottom: $space-3;
+        color: $primary;
+
+        &::before {
+            background-image: url('/assets/icons/dog-footprint.svg');
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 20px;
+            margin-right: $space-2;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin-top: $space-7;
+
+        .list-item {
+            padding-bottom: $space-3;
+            @include flex($align: flex-start, $justify: flex-start, $gap: $space-3, $wrap: nowrap);
+
+            li {
+                font-size: $text-button;
+
+            }
+
+            img {
+                position: relative;
+                top: 7px
+            }
+        }
+
+
+    }
+}
+
+.full-page-controls {
+    left: 50%;
+    bottom: 40px;
+    position: fixed;
+    transform: translateX(-50%);
+    z-Index: 999;
+    display: flex;
+    flex-Direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #787878;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    button {
+        border: none;
+        background-color: transparent;
+        @include flex()
+    }
+
+    p {
+        font-family: 'NotoSansTC-Bold';
+        font-size: 14px;
+        color: $gray40
+    }
+}

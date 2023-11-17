@@ -10,5 +10,6 @@ export type IssueProp = {
     id: number,
     name: string,
     content: string,
-    asset: string
+    asset: string,
+    fullAsset: string
 }

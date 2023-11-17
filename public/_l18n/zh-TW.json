@@ -53,5 +53,8 @@
         "contactFormRecommendationInput": "您的建言",
         "contactFormRecommendationPlaceholder": "請輸入您的建言或問題",
         "contactFormSubmitButton": "送出意見"
+    },
+    "policypage": {
+        "policy": "政策"
     }
 }

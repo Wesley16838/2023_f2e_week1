@@ -53,5 +53,8 @@
         "contactFormRecommendationInput": "Feedback",
         "contactFormRecommendationPlaceholder": "Please enter your feedback or questions",
         "contactFormSubmitButton": "Submit"
+    },
+    "policypage": {
+        "policy": "Policy"
     }
 }

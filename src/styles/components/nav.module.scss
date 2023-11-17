@@ -2,9 +2,10 @@
 
 .nav-wrapper {
     height: 102px;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 40px;
+    z-index: 999;
     @include flex($justify: flex-start);
 
     ul {

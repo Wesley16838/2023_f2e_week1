@@ -1,16 +1,30 @@
 body {
   margin: 0px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 p,
+a,
+label,
+li {
+  font-family: 'NotoSansTC';
+  margin: 0px;
+}
+
 h1,
 h2,
 h3,
 h4,
-h5,
-a,
-label {
-  font-family: 'NotoSansTC';
+h5 {
+  font-family: 'NotoSansTC-Bold';
   margin: 0px;
 }
 

@@ -26,7 +26,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src/pages/policy/index.js"
   ],
   "exclude": [
     "node_modules"
