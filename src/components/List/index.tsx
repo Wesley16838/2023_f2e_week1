@@ -6,7 +6,7 @@ import style from '@/styles/components/list.module.scss'
 const List = ({ data, title }: ListProp) => {
     return <>
         <h2>{title && title}</h2>
-        {data.map((event: EventProp, index: number) => {
+        {data && data.map((event: EventProp, index: number) => {
             return <div key={event.title} className={style['list-wrapper']} style={{ marginTop: index == 0 ? 24 : 0 }}>
                 <div className={style['list-container']}>
                     <Image src={event.asset} width={100} height={100} alt={event.title} />

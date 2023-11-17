@@ -28,8 +28,10 @@ export const getServerSideProps = async (context: { locale: any }) => {
   };
 };
 
-export default function Home({ eventData, issueData }: any) {
+export default function Home() {
   const [data, setData] = useState<any>(null);
+  const [eventData, setEventData] = useState<any>(null);
+  const [issueData, setIssueData] = useState<any>(null);
   const handleOnClick = () => console.log('handleOnClick')
   const {
     register,
@@ -44,6 +46,22 @@ export default function Home({ eventData, issueData }: any) {
         const response = await fetch(`/_l18n/${locale}.json`);
         const jsonData = await response.json();
         setData(jsonData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, [locale]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const eventsResponse = await fetch(`/_l18n/events.${locale}.json`);
+        const issuesResponse = await fetch(`/_l18n/issues.${locale}.json`);
+        const eventsJsonData = await eventsResponse.json();
+        const issuesJsonData = await issuesResponse.json();
+        setEventData(eventsJsonData);
+        setIssueData(issuesJsonData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -124,7 +142,7 @@ export default function Home({ eventData, issueData }: any) {
             <h2>政策議題</h2>
             <div className={styles["issue-wrapper"]}>
               {
-                issueData.map(
+                issueData && issueData.map(
                   (issue: IssueProp) => {
                     return <div className={styles["issue-container"]} key={issue.id + issue.name} style={{ backgroundImage: `url(${issue.asset})` }}>
                       <h4>{issue.name}</h4>
