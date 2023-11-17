@@ -9,7 +9,7 @@
 
     ul {
         list-style-type: none;
-        @include flex($gap: 32px, $justify: flex-start);
+        @include flex($gap: $space-5, $justify: flex-start);
 
         li a {
             color: $primary;

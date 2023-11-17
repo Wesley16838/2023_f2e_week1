@@ -1,7 +1,7 @@
 import { ButtonProps } from '../../types/components';
 import styles from '@/styles/components/button.module.scss'
 
-const Button = ({ name, onClick, type }: ButtonProps) => {
+const Button = ({ name, onClick, type, buttonType }: ButtonProps) => {
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
         e.preventDefault()
         if (onClick) onClick()
@@ -15,7 +15,7 @@ const Button = ({ name, onClick, type }: ButtonProps) => {
         }
     }
 
-    return <button className={styles[type]} type="button" onClick={(e) => handleOnClick(e)} onKeyDown={(e) => handleOnKeyDown(e)}>{name}</button>
+    return <button className={styles[type]} type={buttonType ? buttonType : "button"} onClick={(e) => handleOnClick(e)} onKeyDown={(e) => handleOnKeyDown(e)}>{name}</button>
 }
 
 export default Button

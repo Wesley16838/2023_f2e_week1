@@ -5,6 +5,7 @@ export type ButtonProps = {
     onClick: VoidFunction,
     name: string,
     type: ButtonTheme,
+    buttonType?: "button" | "submit" | "reset" | undefined;
 }
 
 export type NavProps = {
@@ -20,3 +21,4 @@ export type ListProp = {
     title?: string,
     data: EventProp[]
 }
+

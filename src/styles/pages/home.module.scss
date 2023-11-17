@@ -1,8 +1,7 @@
 @import '../abstracts/_abstract-dir';
 
 .section-one,
-.section-two,
-.section-five {
+.section-two {
     width: 1130px;
 }
 
@@ -140,8 +139,13 @@
 .section-four {
     background-color: $white;
     width: 100%;
-    padding-block: $space-8;
+    padding-top: $space-8;
+    padding-bottom: 209px;
     @include flex();
+
+    .issue-four-wrapper {
+        @include flex($direction: column, $align: flex-start, $gap: $space-4)
+    }
 
     .issue-wrapper {
         display: grid;
@@ -163,4 +167,127 @@
         }
     }
 
+}
+
+.section-five {
+    position: relative;
+    width: 100%;
+    margin-top: 129px;
+    background-color: transparent;
+    @include flex();
+
+    .gallery-container {
+        position: absolute;
+        left: 0px;
+        top: -248px;
+    }
+
+    .gallery-item {
+        flex-shrink: 0;
+        margin-right: 20px;
+        /* Adjust margin between images */
+        transition: transform 0.5s ease;
+        /* Add smooth transition effect */
+    }
+
+    .gallery-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        /* Optional: Add border-radius for rounded corners */
+    }
+
+    .contact-form {
+        width: 783px;
+        margin-top: 60px;
+
+        h2 {
+            margin-bottom: $space-4;
+        }
+
+        p {
+            font-size: $text-p;
+
+            &:nth-child(2) {
+                font-family: 'NotoSansTC-Bold';
+                font-weight: 700;
+                margin-bottom: $space-2;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: 40px;
+            }
+        }
+
+        form {
+            @include flex($direction: column, $align: flex-start, $gap: $space-2);
+
+            .form-row {
+                @include flex($gap: $space-4, $align: flex-start);
+
+                label {
+                    width: 90px;
+                    position: relative;
+                    top: 12px;
+                }
+
+                input {
+                    width: 242px;
+                    height: 48px;
+                    padding: $space-2;
+                    box-sizing: border-box;
+                    border: 1px solid $gray70;
+                    font-size: $text-button;
+
+                    &::placeholder {
+                        font-size: $text-button;
+                        color: $gray70;
+                    }
+                }
+
+                textarea {
+                    width: 669px;
+                    height: 112px;
+                    padding: $space-2;
+                    box-sizing: border-box;
+                    border: 1px solid $gray70;
+
+                    &::placeholder {
+                        font-size: $text-button;
+                        color: $gray70;
+                    }
+                }
+
+                &.phone {
+
+                    input {
+                        &:nth-of-type(1) {
+                            width: 80px;
+                            margin-right: $space-2;
+                        }
+
+                        &:nth-of-type(2) {
+                            width: 154px;
+                        }
+                    }
+                }
+            }
+
+            button {
+                align-self: flex-end;
+                margin-top: 32px;
+            }
+        }
+
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }

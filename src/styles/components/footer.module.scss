@@ -1,0 +1,21 @@
+@import '../abstracts/_abstract-dir';
+
+.footer-wrapper {
+    width: 100%;
+    background-color: $white;
+    border-top: 1px solid $gray60;
+    margin-top: $space-7;
+    padding: $space-5 40px;
+    @include flex($justify: space-between);
+
+    ul {
+        list-style-type: none;
+        @include flex($gap: $space-4, $justify: flex-start);
+
+        li a {
+            color: $gray30;
+            font-size: $text-button;
+            text-decoration: none;
+        }
+    }
+}
