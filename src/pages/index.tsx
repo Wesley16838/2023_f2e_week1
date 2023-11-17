@@ -96,7 +96,7 @@ export default function Home() {
         </div>
         <div className={styles["section-four"]}>
           <div className={styles["issue-four-wrapper"]}>
-            <h2>政策議題</h2>
+            <h2>{data && data.homepage.policyTitle}</h2>
             <div className={styles["issue-wrapper"]}>
               {
                 issueData && issueData.map(
@@ -125,16 +125,16 @@ export default function Home() {
             </Marquee>
           </div>
           <div className={styles["contact-form"]}>
-            <h2>民眾服務信箱</h2>
-            <p>您的聲音，我們的行動！</p>
-            <p>今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！</p>
+            <h2>{data && data.homepage.contactFormTitle}</h2>
+            <p>{data && data.homepage.sloganTitle}</p>
+            <p>{data && data.homepage.sloganContent}</p>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className={styles["form-row"]}>
-                <label htmlFor="name">姓名</label>
+                <label htmlFor="name">{data && data.homepage.contactFormNameInput}</label>
                 <input
                   id="name"
                   aria-invalid={errors.name ? "true" : "false"}
-                  placeholder={"請輸入您的姓名"}
+                  placeholder={`${data && data.homepage.contactFormNamePlaceholder}`}
                   {...register("name", { required: true, maxLength: 30 })}
                 />
               </div>
@@ -148,32 +148,32 @@ export default function Home() {
                 />
               </div>
               <div className={`${styles["form-row"]} ${styles["phone"]}`}>
-                <label htmlFor="phonenumber">手機</label>
+                <label htmlFor="phonenumber">{data && data.homepage.contactFormMobileInput}</label>
                 <div>
                   <input
                     id="areanumber"
                     aria-invalid={errors.areanumber ? "true" : "false"}
                     placeholder={"0900"}
-                    {...register("areanumber", { required: true, maxLength: 30 })}
+                    {...register("areanumber", { required: true, maxLength: 4 })}
                   />
                   <input
                     id="phonenumber"
                     aria-invalid={errors.phonenumber ? "true" : "false"}
                     placeholder={"000000"}
-                    {...register("phonenumber", { required: true, maxLength: 30 })}
+                    {...register("phonenumber", { required: true, maxLength: 6 })}
                   />
                 </div>
               </div>
               <div className={`${styles["form-row"]} ${styles["recommendation"]}`}>
-                <label htmlFor="recommendation">您的建言</label>
+                <label htmlFor="recommendation">{data && data.homepage.contactFormRecommendationInput}</label>
                 <textarea
                   id="recommendation"
                   aria-invalid={errors.recommendation ? "true" : "false"}
-                  placeholder={"請輸入您的建言或問題"}
+                  placeholder={`${data && data.homepage.contactFormRecommendationPlaceholder}`}
                   {...register("recommendation", { required: true, maxLength: 100 })}
                 />
               </div>
-              <Button buttonType="submit" type={ButtonTheme.PrimayNormal} name="送出意見" onClick={() => { }} />
+              <Button buttonType="submit" type={ButtonTheme.PrimayNormal} name={`${data && data.homepage.contactFormSubmitButton}`} onClick={() => { }} />
             </form>
           </div>
         </div>

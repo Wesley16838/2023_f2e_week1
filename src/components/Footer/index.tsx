@@ -5,7 +5,8 @@ import Link from "next/link";
 const Footer = ({ data }: FooterProps) => {
     return <div className={styles["footer-wrapper"]}>
         <div>
-            <p className="footnote">2023 鬥立翰 版權所有。<br></br>辦公室地址｜毛孩區，毛茸茸大道99號，狗狗大厦99樓　Tel｜(02) 888-5678　Email｜dogoffice@doglihan.tw</p>
+            <p className="footnote">{data && data.global.footer.copyright}</p>
+            <p className="footnote">{data && data.global.footer.address}</p>
         </div>
         <ul>
             {data && data.global.nav.map((option: NavOptionsProp) => {

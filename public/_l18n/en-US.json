@@ -21,7 +21,11 @@
                 "name": "Small Donations",
                 "routeName": "/donations"
             }
-        ]
+        ],
+        "footer": {
+            "copyright": "Copyright © 2023 Dog Li-Han.",
+            "address": "Office Address | Pet Zone, Furry Avenue 99, Doggy Tower, 99th Floor. Tel | (02) 888-5678 Email | dogoffice@doglihan.tw"
+        }
     },
     "homepage": {
         "pageTitle": "Legislator Election Official Website",
@@ -29,15 +33,25 @@
         "subtitle": "I am Dou Lihan, upholding justice and seeking harmony.\nHoping to shape a better tomorrow together with humanity.",
         "buttonCandidate": "Meet the Candidate",
         "donateTitle": "Small Donations",
-        "donateSubtitle": "Your small donation\nis a big source of motivation for the future of every furry friend!",
-        "donateTotal": "The current total amount of small donations:987,655,873",
+        "donateSubtitle": "Your small donation\nfuels the future of every furry friend!",
+        "donateTotal": "The current total of small donations:987,655,873",
         "donateButtonAction": "Donate",
         "primaryName": "Dog Li-Han",
         "secondaryName": "鬥力翰",
-        "selfIntroductionOne": "I believe enhancing dog welfare and related policies can contribute to Taiwan's future. Dog therapy improves health, boosts work enthusiasm, stimulates the economy, and benefits GDP.",
-        "selfIntroductionTwo": "Hence, I aim to promote legislative policies ensuring the well-being of both dogs and humans. Safeguarding Taiwan's happiness starts with caring for dogs!",
+        "selfIntroductionOne": "Enhancing dog welfare uplifts Taiwan's future—dog therapy improves health, boosts work enthusiasm, stimulates the economy, and benefits GDP.",
+        "selfIntroductionTwo": "Hence, I aim to promote legislative policies ensuring the well-being of both dogs and humans for a happier Taiwan!",
         "eventListTitle": "Lastest Events",
         "slogan": "A Better Taiwan, Guarding Together.",
-        "knowMoreButtonAction": "More"
+        "policyTitle": "Policy Issues",
+        "knowMoreButtonAction": "More",
+        "contactFormTitle": "Public Service Mailbox",
+        "sloganTitle": "Your Voice, Our Action！",
+        "sloganContent": "Today's shelter isn't silent anymore. To spotlight our furry friends, we hosted an unprecedented 'Model Pet Fashion Show.！",
+        "contactFormNameInput": "Name",
+        "contactFormNamePlaceholder": "Please enter your name",
+        "contactFormMobileInput": "Phone",
+        "contactFormRecommendationInput": "Feedback",
+        "contactFormRecommendationPlaceholder": "Please enter your feedback or questions",
+        "contactFormSubmitButton": "Submit"
     }
 }
