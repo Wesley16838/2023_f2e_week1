@@ -5,17 +5,15 @@ import { FullPage, Slide } from 'react-full-page';
 import useFetch from '@/hooks/useFetch';
 import styles from '@/styles/pages/policy.module.scss'
 import Nav from '@/components/Nav';
+import Footer from '@/components/Footer';
 
 class CustomControls extends React.Component {
-
-
     static defaultProps = {
         className: 'full-page-controls',
         style: {
 
         },
     }
-
     renderSlidesNumbers(currentSlideIndex) {
         const { slidesCount, scrollToSlide } = this.props;
         const slidesNumbers = [];
@@ -29,7 +27,6 @@ class CustomControls extends React.Component {
         }
         return slidesNumbers;
     }
-
     render() {
         const {
             getCurrentSlideIndex, slidesCount, style, className,
@@ -79,7 +76,7 @@ const PolicyPage = () => {
                         <div className={styles["policy-picture-container"]}>
                             <Image src={issue.fullAsset} width={0}
                                 height={0} alt={issue.name} layout="responsive" objectFit="contain" style={{ width: '100%', height: 'auto' }} />
-
+                            <Image src="/assets/icons/policy-slogan.svg" width={192} height={211} alt={'policy slogan'} style={{ position: 'absolute', left: 40, bottom: 146, zIndex: 2 }} />
                         </div>
                         <div className={styles["policy-container"]}>
                             <h4>{data.policypage.policy} {index + 1}</h4>
@@ -91,13 +88,16 @@ const PolicyPage = () => {
                                     })
                                 }
                             </ul>
+                            <Image src={issue.backgroundImage.asset} width={issue.backgroundImage.size.width} height={issue.backgroundImage.size.height} alt={'policy slogan'} style={{ position: 'absolute', right: issue.backgroundImage.position.right, top: issue.backgroundImage.position.top }} />
                         </div>
 
                     </Slide>
                 }
             )
         }
-        <Image src="/assets/icons/policy-slogan.svg" width={192} height={211} alt={'policy slogan'} style={{ position: 'fixed', left: 40, bottom: 40 }} />
+        <div className={styles["footer-container"]}>
+            <Footer data={data} />
+        </div>
     </FullPage>
 }
 

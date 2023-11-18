@@ -8,7 +8,18 @@
             "合作動物醫院：目前已有和超過 200 家動物醫院進行初步的合作討論"
         ],
         "asset": "/assets/images/issue-one.png",
-        "fullAsset": "/assets/images/issue-one-large.png"
+        "fullAsset": "/assets/images/issue-one-large.png",
+        "backgroundImage": {
+            "asset": "/assets/icons/policy-1.svg",
+            "position": {
+                "top": 198,
+                "right": -92
+            },
+            "size": {
+                "width": 650,
+                "height": 667
+            }
+        }
     },
     {
         "id": 2,
@@ -19,7 +30,18 @@
             "舉辦寵物活動和工作坊：與各大寵物社團和組織合作，每年舉辦至少 5 場大型的寵物活動，包括寵物才藝比賽、飼養知識工作坊等"
         ],
         "asset": "/assets/images/issue-two.png",
-        "fullAsset": "/assets/images/issue-two-large.png"
+        "fullAsset": "/assets/images/issue-two-large.png",
+        "backgroundImage": {
+            "asset": "/assets/icons/policy-2.svg",
+            "position": {
+                "top": 206,
+                "right": -192
+            },
+            "size": {
+                "width": 700,
+                "height": 703
+            }
+        }
     },
     {
         "id": 3,
@@ -30,7 +52,18 @@
             "製作教育資料：出版寵物飼養手冊、影片和線上課程，讓所有有意飼養寵物的家庭都能輕鬆取得正確的知識"
         ],
         "asset": "/assets/images/issue-three.png",
-        "fullAsset": "/assets/images/issue-three-large.png"
+        "fullAsset": "/assets/images/issue-three-large.png",
+        "backgroundImage": {
+            "asset": "/assets/icons/policy-3.svg",
+            "position": {
+                "top": 371,
+                "right": 82
+            },
+            "size": {
+                "width": 750,
+                "height": 538
+            }
+        }
     },
     {
         "id": 4,
@@ -41,6 +74,17 @@
             "組織人道救援志工：培養志工團隊協助流浪狗轉換形象，出版宣導手冊和影片宣導流浪狗等相關知識，輔導流浪狗重新適應與人類生活的模式，並協助接洽寵物國際領養系統。"
         ],
         "asset": "/assets/images/issue-four.png",
-        "fullAsset": "/assets/images/issue-four-large.png"
+        "fullAsset": "/assets/images/issue-four-large.png",
+        "backgroundImage": {
+            "asset": "/assets/icons/policy-4.svg",
+            "position": {
+                "top": 32,
+                "right": 232
+            },
+            "size": {
+                "width": 500,
+                "height": 492
+            }
+        }
     }
 ]

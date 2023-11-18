@@ -3,6 +3,7 @@
 .policy-picture-container {
     position: relative;
     height: 100vh;
+    z-index: 1;
 }
 
 .policy-container {
@@ -10,6 +11,7 @@
     padding-left: $space-7;
     padding-right: 90px;
     height: 100vh;
+    position: relative;
     @include flex($direction: column, $align: flex-start);
 
     h4 {
@@ -52,7 +54,7 @@
 
 .full-page-controls {
     left: 50%;
-    bottom: 40px;
+    bottom: 146px;
     position: fixed;
     transform: translateX(-50%);
     z-Index: 999;
@@ -77,4 +79,11 @@
         font-size: 14px;
         color: $gray40
     }
+}
+
+.footer-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2;
 }
