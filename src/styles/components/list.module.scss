@@ -2,7 +2,7 @@
 
 .list-wrapper {
     .list-container {
-        @include flex($wrap: nowrap, $gap: 30px);
+        @include flex($wrap: nowrap, $gap: 30px, $justify: flex-start);
 
         h3 {
             margin-bottom: $space-2;

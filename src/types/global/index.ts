@@ -2,8 +2,10 @@ export type EventProp = {
     id: number,
     title: string,
     description: string,
+    fullDescription: string,
     date: string,
-    asset: string
+    asset: string,
+    fullAsset: string,
 }
 
 export type IssueProp = {

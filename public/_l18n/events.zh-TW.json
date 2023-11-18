@@ -3,21 +3,27 @@
     "id": 1,
     "title": "台北寵物論壇，爭取狗狗友善環境",
     "description": "炎炎夏日的周六，我帶著鬥牛犬霸氣墨鏡走進了台北寵物論壇，決定要全力...",
+    "fullDescription": "炎炎夏日的周六，我帶著鬥牛犬霸氣墨鏡走進了台北寵物論壇，決定要全力宣傳「狗狗傲嬌」的理念！誰說只有貓咪有個性，狗狗也應該活出專屬自己的個性。",
     "date": "12.26",
-    "asset": "/assets/images/event-dog-1.png"
+    "asset": "/assets/images/event-dog-1.png",
+    "fullAsset": "/assets/images/event-1-full.png"
   },
   {
     "id": 2,
     "title": "掃街模式開啟！鄉親父老一起來！",
     "description": "街上氣氛真的很棒，從小孩到大人，雖然下起大雨，大家還是穿著雨衣來參...",
+    "fullDescription": "街上氣氛真的很棒，從小孩到大人，雖然下起大雨，大家還是穿著雨衣來參加活動，真的太感人了！這次的活動不僅讓我看到大家的熱情，更加堅定了我推進「狗狗友善環境」政策的決心。",
     "date": "12.24",
-    "asset": "/assets/images/event-dog-2.png"
+    "asset": "/assets/images/event-dog-2.png",
+    "fullAsset": "/assets/images/event-2-full.png"
   },
   {
     "id": 3,
     "title": "收容所模特兒大比拼！",
     "description": "今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉...",
+    "fullDescription": "今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！",
     "date": "12.20",
-    "asset": "/assets/images/event-dog-3.png"
+    "asset": "/assets/images/event-dog-3.png",
+    "fullAsset": "/assets/images/event-3-full.png"
   }
 ]

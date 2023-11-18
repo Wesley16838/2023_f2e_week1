@@ -1,0 +1,20 @@
+@import '../abstracts/_abstract-dir';
+
+.event-banner {
+    width: 100vw;
+    min-height: 282px;
+    background-image: url('/assets/images/event-bg.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.event-wrapper {
+    width: 1129px;
+    margin-top: $space-6;
+    margin-bottom: $space-7;
+}
+
+.eventpage-wrapper {
+    background-color: $blue80;
+    @include flex()
+}

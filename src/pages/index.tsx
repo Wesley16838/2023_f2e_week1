@@ -87,7 +87,7 @@ export default function Home() {
             <p className={styles["introduction"]}>{data && data.homepage.selfIntroductionTwo}</p>
           </div>
           <div className={styles["event"]}>
-            <List data={eventData} title={data && data.homepage.eventListTitle} />
+            <List data={eventData} title={data && data.homepage.eventListTitle} isFullType={false} />
           </div>
         </div>
         <div className={styles["section-three"]}>

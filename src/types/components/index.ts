@@ -19,7 +19,8 @@ export type NavOptionsProp = {
 
 export type ListProp = {
     title?: string,
-    data: EventProp[]
+    data: EventProp[],
+    isFullType: boolean,
 }
 
 export type FooterProps = {
