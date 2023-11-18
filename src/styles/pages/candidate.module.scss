@@ -1,0 +1,23 @@
+@import '../abstracts/_abstract-dir';
+
+.candidate-wrapper {
+    width: 100vw;
+    background-image: url('/assets/images/candidate-dog.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    @include flex($align: flex-start);
+}
+
+.introduction-container {
+    width: 322px;
+    margin-top: 200px;
+    margin-bottom: 74px;
+    @include flex($direction: column, $align: flex-start, $gap: $space-5)
+}
+
+.introduction-wrapper {
+    width: 1130px;
+    @include flex($justify: flex);
+}

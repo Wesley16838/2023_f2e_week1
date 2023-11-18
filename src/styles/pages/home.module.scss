@@ -173,6 +173,7 @@
     position: relative;
     width: 100%;
     margin-top: 129px;
+    padding-bottom: $space-7;
     background-color: transparent;
     @include flex();
 
@@ -280,15 +281,5 @@
             }
         }
 
-    }
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
     }
 }
