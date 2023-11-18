@@ -14,7 +14,6 @@ const EventsPage = () => {
         <Nav data={data} />
         <div className={styles["event-banner"]}></div>
         <div className={styles["event-wrapper"]}>
-            <h2></h2>
             {
                 <List data={eventData} title={data && data.homepage.eventListTitle} isFullType={true} />
 

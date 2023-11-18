@@ -7,7 +7,7 @@ const List = ({ data, title, isFullType }: ListProp) => {
     return <>
         <h2>{title && title}</h2>
         {data && data.map((event: EventProp, index: number) => {
-            return <div key={event.title} className={style['list-wrapper']} style={{ marginTop: index == 0 ? 24 : 0 }}>
+            return <div key={event.title} className={style['list-wrapper']} style={{ marginTop: index == 0 ? isFullType ? 40 : 24 : 0 }}>
                 <div className={style['list-container']}>
                     <Image src={isFullType ? event.fullAsset : event.asset} width={isFullType ? 322 : 100} height={isFullType ? 221 : 100} objectFit="contain" alt={event.title} />
                     <div>
