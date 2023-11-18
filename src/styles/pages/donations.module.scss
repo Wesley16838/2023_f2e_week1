@@ -12,6 +12,18 @@
     width: 1130px;
     margin-top: $space-6;
     margin-bottom: $space-7;
+
+    .title {
+        margin-bottom: $space-5;
+    }
+
+    .subtitle {
+        margin-bottom: $space-7;
+    }
+
+    .action {
+        margin-bottom: $space-3;
+    }
 }
 
 .donationspage-wrapper {
@@ -20,7 +32,7 @@
 }
 
 .option-wrapper {
-    @include flex($justify: space-between)
+    @include flex($justify: space-between);
 }
 
 .option-container {

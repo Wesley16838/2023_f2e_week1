@@ -16,9 +16,9 @@ const DonationsPage = () => {
         <Nav data={data} />
         <div className={styles["donations-banner"]}></div>
         <div className={styles["donations-wrapper"]}>
-            <h2>{data && data.donationspage.title}</h2>
-            <p>{data && data.donationspage.subtitle}</p>
-            <p>{data && data.donationspage.action}</p>
+            <h2 className={styles["title"]}>{data && data.donationspage.title}</h2>
+            <p className={styles["subtitle"]}>{data && data.donationspage.subtitle}</p>
+            <p className={styles["action"]}>{data && data.donationspage.action}</p>
             <div className={styles["option-wrapper"]}>
                 {
                     data && data.donationspage.actionOptions.map((option: donationOptionProp, index: number) => {
