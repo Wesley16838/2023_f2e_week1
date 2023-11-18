@@ -15,3 +15,9 @@ export type IssueProp = {
     asset: string,
     fullAsset: string
 }
+
+export type donationOptionProp = {
+    optionName: string,
+    optionAmount: string,
+    optionAsset: string
+}

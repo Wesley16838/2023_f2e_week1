@@ -1,0 +1,48 @@
+@import '../abstracts/_abstract-dir';
+
+.donations-banner {
+    width: 100vw;
+    min-height: 282px;
+    background-image: url('/assets/images/donations-dog.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.donations-wrapper {
+    width: 1130px;
+    margin-top: $space-6;
+    margin-bottom: $space-7;
+}
+
+.donationspage-wrapper {
+    background-color: $blue80;
+    @include flex()
+}
+
+.option-wrapper {
+    @include flex($justify: space-between)
+}
+
+.option-container {
+    width: 260px;
+    height: 324px;
+    border: none;
+    border-radius: $space-3;
+    background-color: #FFFFFFCC;
+    @include flex($direction: column, $gap: $space-3);
+
+    .option-inner-container {
+        height: 57px;
+        @include flex($direction: column, $justify: flex-start, $gap: $space-1);
+
+        p {
+            &:nth-of-type(1) {
+                font-size: $text-p;
+            }
+
+            &:nth-of-type(2) {
+                color: $gray40
+            }
+        }
+    }
+}

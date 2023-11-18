@@ -60,5 +60,35 @@
     "candidatepage": {
         "title": "認識鬥立翰",
         "content": "鬥立翰在台灣這片土地長大，深感對台灣的情感。狗狗們需要人類的呵護和照顧，而狗狗也需要一位忠實的代表，一位能夠聆聽毛孩們心聲，並將這些聲音帶入立法院的代表。因此，我踏上了參選立委的征程，希望能為毛孩們帶來更好的未來。\n\n我堅信推動更完善的狗狗福利和相關政策，能間接地發展台灣的未來。畢竟，狗狗療育的存在能幫助改善人民身心健康，進而賺更多的錢，激發工作熱情、推動經濟，為台灣的GDP帶來巨大效益。台灣經濟發展良好，就能過上更好的生活，狗狗們也能改善生活環境，是一箭雙鵰的好事。因此，我期望能在立法院推進政策，確保狗狗和人類都能得到最大的福祉。\n\n護航台灣的幸福，就從照顧狗狗開始！請支持鬥立翰，讓我們攜手努力，為台灣帶來更美好的未來。"
+    },
+    "donationspage": {
+        "title": "小額捐款",
+        "subtitle": "您的小筆捐款，是每隻毛孩未來的大大動力！",
+        "action": "捐款方案：",
+        "actionOptions": [
+            {
+                "optionName": "鬥小將",
+                "optionAmount": "捐款新台幣600元",
+                "optionAsset": "/assets/images/firstOption.png"
+            },
+            {
+                "optionName": "鬥之星",
+                "optionAmount": "捐款新台幣6000元",
+                "optionAsset": "/assets/images/secondOption.png"
+            },
+            {
+                "optionName": "鬥傳奇",
+                "optionAmount": "捐款新台幣60000元",
+                "optionAsset": "/assets/images/thirdOption.png"
+            },
+            {
+                "optionName": "鬥之友",
+                "optionAmount": "自訂贊助金額",
+                "optionAsset": "/assets/images/fourthOption.png"
+            }
+        ],
+        "donateNumberPrefix": "已有",
+        "donateNumberPostfix": "人贊助",
+        "donateAction": "我要捐款"
     }
 }
