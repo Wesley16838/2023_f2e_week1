@@ -3,16 +3,20 @@
 .nav-wrapper {
     width: 100vw;
     height: 102px;
-    padding-left: 20px;
+    padding-inline: 20px;
     position: fixed;
     top: 0px;
     z-index: 999;
     box-sizing: border-box;
     transition: background-color 0.5s ease;
-    @include flex($justify: flex-start);
+    @include flex($justify: space-between);
 
     &.scrolled {
         background-color: #FFFFFFE5;
+    }
+
+    .nav-container {
+        @include flex($justify: flex-start);
     }
 
     ul {
@@ -30,4 +34,8 @@
             text-decoration: none;
         }
     }
+}
+
+.locale-wrapper {
+    @include flex($gap: $space-1);
 }

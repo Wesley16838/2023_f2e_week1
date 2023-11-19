@@ -134,6 +134,7 @@
 
             @include devices(extralargedesktop) {
                 bottom: 35px;
+                right: 20px;
             }
         }
     }
@@ -231,6 +232,11 @@
             border-radius: 20px;
             background-color: #a4a4a4;
             @include flex($direction: column, $gap: $space-4);
+
+            @include devices(extralargedesktop) {
+                padding: 20px;
+                box-sizing: border-box;
+            }
 
             h4 {
                 text-align: center;

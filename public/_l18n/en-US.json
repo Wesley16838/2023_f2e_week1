@@ -6,25 +6,26 @@
                 "routeName": "/"
             },
             {
-                "name": "Meet the Candidate",
+                "name": "Candidate",
                 "routeName": "/candidate"
             },
             {
-                "name": "Latest Events",
+                "name": "Events",
                 "routeName": "/events"
             },
             {
-                "name": "Policy Initiatives",
+                "name": "Policy",
                 "routeName": "/policy"
             },
             {
-                "name": "Small Donations",
+                "name": "Donations",
                 "routeName": "/donations"
             }
         ],
         "footer": {
             "copyright": "Copyright © 2023 Dog Li-Han.",
-            "address": "Office Address | Pet Zone, Furry Avenue 99, Doggy Tower, 99th Floor. Tel | (02) 888-5678 Email | dogoffice@doglihan.tw"
+            "address": "Office Address | Pet Zone, Furry Avenue 99, Doggy Tower, 99th Floor.",
+            "contact": "Tel｜(02) 888-5678　Email｜dogoffice@doglihan.tw"
         }
     },
     "homepage": {
@@ -33,8 +34,8 @@
         "subtitle": "I am Dou Lihan, upholding justice and seeking harmony.\nHoping to shape a better tomorrow together with humanity.",
         "buttonCandidate": "Meet the Candidate",
         "donateTitle": "Small Donations",
-        "donateSubtitle": "Your small donation\nfuels the future of every furry friend!",
-        "donateTotal": "The current total of small donations:987,655,873",
+        "donateSubtitle": "Your donation\nfuels the future of every doggy!",
+        "donateTotal": "The current total of donations:987,655,873",
         "donateButtonAction": "Donate",
         "primaryName": "Dog Li-Han",
         "secondaryName": "鬥力翰",
@@ -56,5 +57,39 @@
     },
     "policypage": {
         "policy": "Policy"
+    },
+    "candidatepage": {
+        "title": "Get to know Dog Li-Han",
+        "content": "Doulithan grew up in the land of Taiwan and deeply feels a connection to the island. Dogs require the care and attention of humans, and they also need a faithful representative—a person who can listen to the voices of these furry companions and bring those voices into the legislative arena. Therefore, I embarked on the journey to run for legislative office, hoping to bring a better future for our canine friends.\n\nI firmly believe that advocating for improved dog welfare and related policies can indirectly contribute to the development of Taiwan's future. After all, the presence of therapy dogs can help improve the mental and physical health of the people, leading to increased productivity, enhanced work enthusiasm, and economic growth that brings significant benefits to Taiwan's GDP. With a thriving economy, people can lead better lives, and dogs can also experience improved living conditions—a win-win situation. Therefore, I aspire to advance policies in the legislative body to ensure the maximum well-being for both dogs and humans.\n\nSafeguarding the happiness of Taiwan starts with caring for dogs! Please support Doulithan, and let's work together to bring a brighter future to Taiwan."
+    },
+    "donationspage": {
+        "title": "Small Donations",
+        "subtitle": "Your small donation is a significant contribution to the future of every doggy!",
+        "action": "Plans:",
+        "actionOptions": [
+            {
+                "optionName": "Little Fighter",
+                "optionAmount": "Donate 600 NT$",
+                "optionAsset": "/assets/images/firstOption.png"
+            },
+            {
+                "optionName": "Fighting Star",
+                "optionAmount": "Donate 6000 NT$",
+                "optionAsset": "/assets/images/secondOption.png"
+            },
+            {
+                "optionName": "Fighting Legend",
+                "optionAmount": "Donate 60000 NT$",
+                "optionAsset": "/assets/images/thirdOption.png"
+            },
+            {
+                "optionName": "Fighting Friend",
+                "optionAmount": "Custom Amount",
+                "optionAsset": "/assets/images/fourthOption.png"
+            }
+        ],
+        "donateNumberPrefix": "Already",
+        "donateNumberPostfix": "sponsored",
+        "donateAction": "Donate"
     }
 }

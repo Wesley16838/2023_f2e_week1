@@ -3,21 +3,27 @@
         "id": 1,
         "title": "Taipei Pet Forum",
         "description": "On a hot summer Saturday, I brought my Bull Terrier with...",
+        "fullDescription": "On a hot Saturday, I strutted into Taipei Pet Forum with my bulldog and stylish shades, determined to champion the idea of \"doggy pride\"! Dogs have personalities too, not just cats.",
         "date": "12.26",
-        "asset": "/assets/images/event-dog-1.png"
+        "asset": "/assets/images/event-dog-1.png",
+        "fullAsset": "/assets/images/event-1-full.png"
     },
     {
         "id": 2,
         "title": "Street-sweeping mode on!",
         "description": "The street atmosphere was amazing! Despite heavy rain, people...",
+        "fullDescription": "Despite heavy rain, people of all ages, from kids to adults, showed up in raincoats, creating a fantastic atmosphere. Their enthusiasm further solidified my commitment to promoting a \"dog-friendly environment.\"",
         "date": "12.24",
-        "asset": "/assets/images/event-dog-2.png"
+        "asset": "/assets/images/event-dog-2.png",
+        "fullAsset": "/assets/images/event-2-full.png"
     },
     {
         "id": 3,
         "title": "Shelter Model Showdown!",
         "description": "Today, the shelter is no longer a place of silence. In order to...",
+        "fullDescription": "Today, the shelter is no longer silent. To raise awareness about the furry friends here, we organized an unprecedented \"modeling show\"!",
         "date": "12.20",
-        "asset": "/assets/images/event-dog-3.png"
+        "asset": "/assets/images/event-dog-3.png",
+        "fullAsset": "/assets/images/event-3-full.png"
     }
 ]

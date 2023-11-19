@@ -4,8 +4,16 @@ enum ButtonTheme {
     PrimayNormal = "primary-normal",
     PrimayNormalAlt = "primary-normal-alt",
     SecondaryNormal = "secondary-normal",
+    Text = "text"
+}
+
+enum Locale {
+    zhTW = "zh-TW",
+    enUS = "en-US"
+
 }
 
 export {
-    ButtonTheme
+    ButtonTheme,
+    Locale
 }

@@ -59,3 +59,14 @@
         border: 1px solid $black;
     }
 }
+
+.text {
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    &.activate {
+        font-weight: $bold;
+        font-family: 'NotoSansTC-Bold';
+    }
+}
