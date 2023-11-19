@@ -13,8 +13,8 @@ The F2E 立委競選官網，一位正準備競選的立委候選人，需要好
 
 本專案使用 `npx create-next-app@latest` ，並部署到 Vercel，運行方式使用 `npm install` 下載依賴包， `npm run dev` 運行
 
-- Next 版本 `v16.4.2`
-- React 版本 `v17.0.2`
+- Next 版本 `v14.0.2`
+- React 版本 `v^18`
 
 ## 資料夾說明
 
