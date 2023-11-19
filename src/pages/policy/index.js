@@ -72,7 +72,7 @@ const PolicyPage = () => {
                 (issue, index) => {
                     return <Slide style={{
                         ...baseStyle,
-                    }}>
+                    }} key={issue.name}>
                         <div className={styles["policy-picture-container"]}>
                             <Image src={issue.fullAsset} width={0}
                                 height={0} alt={issue.name} layout="fill"
@@ -85,7 +85,7 @@ const PolicyPage = () => {
                             <ul>
                                 {
                                     issue.content.map(item => {
-                                        return <div className={styles["list-item"]}><Image src="/assets/icons/blue-dot.svg" width={12} height={12} /><li>{item}</li></div>
+                                        return <div className={styles["list-item"]} key={item}><Image src="/assets/icons/blue-dot.svg" width={12} height={12} alt="blue dot" /><li>{item}</li></div>
                                     })
                                 }
                             </ul>

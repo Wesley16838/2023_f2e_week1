@@ -35,7 +35,7 @@ const Nav = ({ data }: NavProps) => {
 
     useEffect(() => {
         router.locale && addCurrentLocale(langs.get(router.locale) as Locale);
-    }, [])
+    }, [addCurrentLocale])
 
     const handleOnSwitchLanguage = (val: Locale) => {
         addCurrentLocale(val)

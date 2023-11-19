@@ -22,7 +22,7 @@ const DonationsPage = () => {
             <div className={styles["option-wrapper"]}>
                 {
                     data && data.donationspage.actionOptions.map((option: donationOptionProp, index: number) => {
-                        return <div className={styles["option-container"]}>
+                        return <div className={styles["option-container"]} key={option.optionName}>
                             <Image src={option.optionAsset} width={88} height={88} alt={option.optionName + 'Icon'} />
                             <h3>{option.optionName}</h3>
                             <div className={styles["option-inner-container"]}>
