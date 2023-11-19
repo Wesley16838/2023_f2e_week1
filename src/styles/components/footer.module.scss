@@ -6,11 +6,21 @@
     border-top: 1px solid $gray60;
     padding: $space-5 40px;
     box-sizing: border-box;
-    @include flex($justify: space-between);
+    @include flex($justify: space-between, $align: flex-end);
+
+    .contact-wrapper {
+        @include flex($justify: flex-start);
+
+        @include devices(extralargedesktop) {
+            flex-direction: column;
+        }
+    }
 
     ul {
         list-style-type: none;
-        @include flex($gap: $space-4, $justify: flex-start);
+        margin-block: 0px;
+        padding-left: 0px;
+        @include flex($gap: 20px, $justify: flex-start);
 
         li a {
             color: $gray30;

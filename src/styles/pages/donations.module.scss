@@ -6,12 +6,17 @@
     background-image: url('/assets/images/donations-dog.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .donations-wrapper {
     width: 1130px;
     margin-top: $space-6;
     margin-bottom: $space-7;
+
+    @include devices(extralargedesktop) {
+        width: 900px;
+    }
 
     .title {
         margin-bottom: $space-5;
@@ -32,7 +37,12 @@
 }
 
 .option-wrapper {
-    @include flex($justify: space-between);
+    @include flex($justify: space-between, $wrap: nowrap);
+
+    @include devices(extralargedesktop) {
+        width: 900px;
+        gap: 25px;
+    }
 }
 
 .option-container {

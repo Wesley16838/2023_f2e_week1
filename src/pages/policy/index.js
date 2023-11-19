@@ -75,7 +75,8 @@ const PolicyPage = () => {
                     }}>
                         <div className={styles["policy-picture-container"]}>
                             <Image src={issue.fullAsset} width={0}
-                                height={0} alt={issue.name} layout="responsive" objectFit="contain" style={{ width: '100%', height: 'auto' }} />
+                                height={0} alt={issue.name} layout="fill"
+                                objectFit="cover" />
                             <Image src="/assets/icons/policy-slogan.svg" width={192} height={211} alt={'policy slogan'} style={{ position: 'absolute', left: 40, bottom: 146, zIndex: 2 }} />
                         </div>
                         <div className={styles["policy-container"]}>

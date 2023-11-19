@@ -42,8 +42,9 @@ export default function Home() {
             <Image
               src="/assets/icons/slogan.svg"
               alt={data && data.homepage.title}
-              width={578}
-              height={192}
+              className={styles['titleImage']}
+              width={0}
+              height={0}
               priority
             />
             <h5>{data && data.homepage.subtitle}</h5>

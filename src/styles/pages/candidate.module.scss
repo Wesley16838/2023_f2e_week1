@@ -19,5 +19,9 @@
 
 .introduction-wrapper {
     width: 1130px;
-    @include flex($justify: flex);
+    @include flex($justify: flex-start);
+
+    @include devices(extralargedesktop) {
+        width: 900px;
+    }
 }

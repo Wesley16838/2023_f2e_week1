@@ -3,6 +3,10 @@
 .section-one,
 .section-two {
     width: 1130px;
+
+    @include devices(extralargedesktop) {
+        width: 900px;
+    }
 }
 
 .section-one {
@@ -10,12 +14,30 @@
     height: 891px;
     @include flex($direction: column, $justify: flex-start, $align: flex-start);
 
+    @include devices(extralargedesktop) {
+        height: 660px;
+    }
+
+    .titleImage {
+        width: 578px;
+        height: 192px;
+
+        @include devices(extralargedesktop) {
+            width: 421.45px;
+            height: 140px;
+        }
+    }
+
     .title-wrapper {
         position: absolute;
         z-index: 1;
         left: 0;
         top: 280px;
         @include flex($direction: column, $justify: flex-start, $align: flex-start, $gap: $space-4);
+
+        @include devices(extralargedesktop) {
+            top: 200px;
+        }
     }
 
     .homepage-dog {
@@ -23,6 +45,13 @@
         right: 0px;
         top: 0px;
         z-index: 0;
+        width: 668px;
+        height: 811px;
+
+        @include devices(extralargedesktop) {
+            width: 494px;
+            height: 600px;
+        }
     }
 
     .donate-dog {
@@ -30,6 +59,15 @@
         left: 285px;
         top: 600px;
         z-index: 2;
+        width: 197px;
+        height: 197px;
+
+        @include devices(extralargedesktop) {
+            width: 145px;
+            height: 145px;
+            left: 275px;
+            top: 425px;
+        }
     }
 }
 
@@ -39,11 +77,18 @@
     grid-template-columns: 630px 438px;
     column-gap: 62px;
     row-gap: 32px;
-    grid-template-rows: auto;
+    grid-template-rows: 288px 217px;
     grid-template-areas:
         "donate event"
         "introduction event";
     margin-bottom: $space-7;
+
+    @include devices(extralargedesktop) {
+        grid-template-columns: 500px 360px;
+        grid-template-rows: 207px 249px;
+        column-gap: 40px;
+        row-gap: 20px;
+    }
 
     .donate {
         height: 288px;
@@ -56,8 +101,17 @@
         position: relative;
         @include flex($justify: space-between, $align: flex-end);
 
+        @include devices(extralargedesktop) {
+            height: 100%;
+            padding: 30px 20px;
+        }
+
         .donate-content {
-            @include flex($direction: column, $gap: $space-4, $align: flex-start)
+            @include flex($direction: column, $gap: $space-4, $align: flex-start);
+
+            @include devices(extralargedesktop) {
+                gap: $space-3
+            }
         }
 
         .orange-logo {
@@ -65,6 +119,11 @@
             bottom: 24px;
             right: 135px;
             z-index: 0;
+
+            @include devices(extralargedesktop) {
+                height: 150px;
+                width: 108px;
+            }
         }
 
         .donate-button-wrapper {
@@ -72,16 +131,20 @@
             bottom: 60px;
             right: 40px;
             z-index: 1;
+
+            @include devices(extralargedesktop) {
+                bottom: 35px;
+            }
         }
     }
 
     .event {
-        height: 562px;
+        height: 100%;
         grid-area: event;
     }
 
     .introduction-wrapper {
-        height: 217px;
+        height: 100%;
         grid-area: introduction;
         @include flex($direction: column, $gap: 8px, $justify: flex-start, $align: flex-start);
 
@@ -133,6 +196,10 @@
         transform: translateY(-50%);
         left: calc((100% - 1130px)/2);
         z-index: 2;
+
+        @include devices(extralargedesktop) {
+            left: calc((100% - 900px)/2);
+        }
     }
 }
 
@@ -153,6 +220,10 @@
         grid-template-rows: 1fr 1fr;
         gap: $space-4;
         width: 1130px;
+
+        @include devices(extralargedesktop) {
+            width: 900px;
+        }
 
         .issue-container {
             height: 309px;

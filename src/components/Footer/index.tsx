@@ -6,7 +6,11 @@ const Footer = ({ data }: FooterProps) => {
     return <div className={styles["footer-wrapper"]}>
         <div>
             <p className="footnote">{data && data.global.footer.copyright}</p>
-            <p className="footnote">{data && data.global.footer.address}</p>
+            <div className={styles["contact-wrapper"]}>
+                <p className="footnote">{data && data.global.footer.address}</p>
+                <p className="footnote">{data && data.global.footer.contact}</p>
+            </div>
+
         </div>
         <ul>
             {data && data.global.nav.map((option: NavOptionsProp) => {

@@ -13,7 +13,7 @@ const List = ({ data, title, isFullType }: ListProp) => {
                     <div>
                         <h3 className="primary">{event.date}</h3>
                         <h5>{event.title}</h5>
-                        <p className="body">{isFullType ? event.fullDescription : event.description}</p>
+                        <p className={`body ${!isFullType ? style['simple-event'] : ""}`}>{isFullType ? event.fullDescription : event.description}</p>
                     </div>
                 </div>
                 {index < data.length - 1 && <div className={style["line"]}></div>}

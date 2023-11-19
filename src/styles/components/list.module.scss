@@ -17,6 +17,14 @@
             font-family: 'NotoSansTC-Bold';
             font-weight: 700;
         }
+
+        .simple-event {
+            display: block;
+
+            @include devices(extralargedesktop) {
+                display: none;
+            }
+        }
     }
 
     .line {
