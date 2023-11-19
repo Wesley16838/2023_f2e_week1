@@ -1,41 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The F2E 立委競選官網  | [Demo](https://2023-f2e-week1.vercel.app/en-US)
 
-## Getting Started
+## 作品畫面
 
-First, run the development server:
+![The F2E 全台公車動態時刻查詢應用服務畫面](https://i.imgur.com/hNh7FuE.png)
+## 作品說明
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+設計採用 [Yu](https://2023.thef2e.com/users/12061579704045424141) 的設計稿
+
+The F2E 立委競選官網，一位正準備競選的立委候選人，需要好的形象官網，為他塑造好的形象
+
+## 系統說明
+
+本專案使用 `npx create-next-app@latest` ，並部署到 Vercel，運行方式使用 `npm install` 下載依賴包， `npm run dev` 運行
+
+- Next 版本 `v16.4.2`
+- React 版本 `v17.0.2`
+
+## 資料夾說明
+
+```
+|- /src
+    |- /components：共用元件
+    |- /constants：共用元件，如 Enum
+    |- /pages：頁面
+    |- /context：狀態管理
+    |- /fonts：字體管理
+    |- /hooks：Custom Hooks
+    |- /styles：各元件和頁面的style
+    |- /types：各元件和頁面的type
+|- /public
+    |- /_l18n：多語系
+    |- /assets：Icon 與 Image
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 使用技術
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# 2023_f2e_week1
+- NextJS
+- TypeScript
+- SCSS
