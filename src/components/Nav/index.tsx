@@ -56,7 +56,7 @@ const Nav = ({ data }: NavProps) => {
         <div className={styles['locale-wrapper']}>
             <Image src="/assets/icons/language-switch.svg" width={24} height={24} alt="Logo" />
             <Button type={ButtonTheme.Text} onClick={() => handleOnSwitchLanguage(Locale.enUS)} name={'English'} />
-            |
+            <div className={styles['vertical-line']}></div>
             <Button type={ButtonTheme.Text} onClick={() => handleOnSwitchLanguage(Locale.zhTW)} name={'中文'} />
         </div>
     </div>

@@ -39,3 +39,9 @@
 .locale-wrapper {
     @include flex($gap: $space-1);
 }
+
+.vertical-line {
+    width: 1px;
+    height: 15px;
+    border-right: 1px solid $black;
+}
