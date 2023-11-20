@@ -10,29 +10,14 @@ import Footer from '@/components/Footer';
 class CustomControls extends React.Component {
     static defaultProps = {
         className: 'full-page-controls',
-        style: {
+    }
 
-        },
-    }
-    renderSlidesNumbers(currentSlideIndex) {
-        const { slidesCount, scrollToSlide } = this.props;
-        const slidesNumbers = [];
-        for (let i = 0; i < slidesCount; i++) {
-            const buttonProps = {
-                disabled: currentSlideIndex === i,
-                key: i,
-                onClick: () => scrollToSlide(i),
-            };
-            slidesNumbers.push(<button type="button" {...buttonProps}>{i + 1}</button>);
-        }
-        return slidesNumbers;
-    }
     render() {
         const {
             getCurrentSlideIndex, slidesCount, style, className,
         } = this.props;
         const currentSlideIndex = getCurrentSlideIndex();
-
+        if (getCurrentSlideIndex() === -1) this.props.onNext()
         return (
             <div className={styles[className]} style={style}>
                 <button
@@ -65,6 +50,7 @@ const PolicyPage = () => {
         gridTemplateColumns: '1fr 1fr',
         position: 'relative'
     };
+
     return <FullPage controls={CustomControls}>
         <Nav data={data} />
         {
@@ -80,7 +66,7 @@ const PolicyPage = () => {
                             <Image src="/assets/icons/policy-slogan.svg" width={192} height={211} alt={'policy slogan'} style={{ position: 'absolute', left: 40, bottom: 146, zIndex: 2 }} />
                         </div>
                         <div className={styles["policy-container"]}>
-                            <h4>{data.policypage.policy} {index + 1}</h4>
+                            <h4>{data && data.policypage.policy} {index + 1}</h4>
                             <h2>{issue.name}</h2>
                             <ul>
                                 {

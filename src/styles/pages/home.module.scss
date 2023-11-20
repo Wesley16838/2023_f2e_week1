@@ -7,6 +7,10 @@
     @include devices(extralargedesktop) {
         width: 900px;
     }
+
+    @include devices(tablet) {
+        width: 700px;
+    }
 }
 
 .section-one {
