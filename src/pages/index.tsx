@@ -47,7 +47,8 @@ export default function Home() {
               height={0}
               priority
             />
-            <h5>{data && data.homepage.subtitle}</h5>
+            <h5 className={styles['non-tablet-subtitle']}>{data && data.homepage.subtitle}</h5>
+            <h5 className={styles['tablet-subtitle']}>{data && data.homepage.tabletSubtitle}</h5>
             <Button name={data && data.homepage.buttonCandidate} type={ButtonTheme.PrimayNormalAlt} onClick={handleOnClick} />
           </div>
           <Image
@@ -66,6 +67,34 @@ export default function Home() {
             alt={data && data.homepage.title}
             priority
           />
+
+          <Image
+            className={styles['tablet-donate-dog-white']}
+            src="/assets/icons/donate-dog-white.svg"
+            width={130}
+            height={130}
+            alt={data && 'tablet' + data.homepage.title}
+            priority
+          />
+
+          <Image
+            className={styles['tablet-donate-dog']}
+            src="/assets/images/tablet-dog.png"
+            width={375}
+            height={615}
+            alt={data && 'tablet' + data.homepage.title}
+            priority
+          />
+
+          <Image
+            className={styles['tablet-donate-dog-bg']}
+            src="/assets/images/tablet-dog-bg.svg"
+            width={352}
+            height={257}
+            alt={data && 'tablet' + data.homepage.title}
+            priority
+          />
+
         </div>
         <div className={styles["section-two"]}>
           <div className={styles["donate"]}>
@@ -93,7 +122,8 @@ export default function Home() {
         </div>
         <div className={styles["section-three"]}>
           <Image src="/assets/icons/slogan-two.svg" width={553} height={55} className={styles["slogan-image"]} alt="更好的台灣, 一同守護" />
-          <Image src="/assets/images/dog-banner.png" fill className={styles["image"]} alt="背景圖片" />
+          <Image src="/assets/icons/slogan-two-small.svg" width={286} height={108} className={styles["slogan-image-small"]} alt="更好的台灣, 一同守護" />
+          {/* <Image src="/assets/images/dog-banner.png" fill className={styles["image"]} alt="背景圖片" /> */}
         </div>
         <div className={styles["section-four"]}>
           <div className={styles["issue-four-wrapper"]}>

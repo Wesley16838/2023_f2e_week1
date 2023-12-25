@@ -17,6 +17,10 @@
     @include devices(extralargedesktop) {
         width: 900px;
     }
+
+    @include devices(largelaptop) {
+        width: 700px;
+    }
 }
 
 .eventpage-wrapper {

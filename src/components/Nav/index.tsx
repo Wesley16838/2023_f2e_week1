@@ -7,6 +7,7 @@ import Button from '../Button';
 import { ButtonTheme, Locale } from '@/constants/enum';
 import { useLocaleContext } from '@/context/localeProvider';
 import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 const langs = new Map([
     ["en-US", Locale.enUS],
@@ -16,6 +17,8 @@ const langs = new Map([
 
 const Nav = ({ data }: NavProps) => {
     const [scrolled, setScrolled] = useState(false);
+    const [isMenuOpened, setMenuOpened] = useState(false);
+    const pathname = usePathname();
     const { currentLocale, addCurrentLocale } = useLocaleContext()
     const router = useRouter()
     useEffect(() => {
@@ -41,7 +44,15 @@ const Nav = ({ data }: NavProps) => {
         addCurrentLocale(val)
         router.push(router.pathname, router.pathname, { locale: val })
     }
-    return <div className={`${styles['nav-wrapper']} ${scrolled ? styles['scrolled'] : ""}`}>
+
+    useEffect(() => {
+        document.body.style.overflow = isMenuOpened ? "hidden" : "scroll";
+        return () => {
+            document.body.style.overflow = "scroll"
+        };
+    }, [isMenuOpened]);
+
+    return <><div className={`${styles['nav-wrapper']} ${scrolled ? styles['scrolled'] : ""}`}>
         <div className={styles['nav-container']}>
             <Image src="/assets/icons/logo.svg" width={38} height={54} alt="Logo" />
             <ul>
@@ -60,6 +71,26 @@ const Nav = ({ data }: NavProps) => {
             <Button type={ButtonTheme.Text} onClick={() => handleOnSwitchLanguage(Locale.zhTW)} name={'中文'} />
         </div>
     </div>
+        <nav role="navigation" className={styles['nav']}>
+            <div className={styles['menuToggle']}>
+                <input type="checkbox" onClick={() => {
+                    setMenuOpened(!isMenuOpened);
+                }} />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul className={styles['menu']}>
+                    {
+                        data && data.global.nav.map((option: NavOptionsProp) => {
+                            return <li key={option.name}><Link href={option.routeName} locale={currentLocale}>{option.name}</Link></li>
+                        })
+                    }
+                </ul>
+                <Image src="/assets/icons/fb.svg" width={32} height={32} alt="FB Logo" className={styles['fb-logo']} />
+                <Image src="/assets/icons/ig.svg" width={32} height={32} alt="IG Logo" className={styles['ig-logo']} />
+            </div>
+        </nav>
+    </>
 }
 
 export default Nav

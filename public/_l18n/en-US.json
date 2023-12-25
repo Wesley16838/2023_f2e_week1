@@ -25,13 +25,15 @@
         "footer": {
             "copyright": "Copyright © 2023 Dog Li-Han.",
             "address": "Office Address | Pet Zone, Furry Avenue 99, Doggy Tower, 99th Floor.",
-            "contact": "Tel｜(02) 888-5678　Email｜dogoffice@doglihan.tw"
+            "contact": "Tel｜(02) 888-5678　Email｜dogoffice@doglihan.tw",
+            "tabletContact": "Tel｜(02) 888-5678\nEmail｜dogoffice@doglihan.tw"
         }
     },
     "homepage": {
         "pageTitle": "Legislator Election Official Website",
         "title": "As steadfast as a bull, defending Taiwan's future!",
         "subtitle": "I am Dou Lihan, upholding justice and seeking harmony.\nHoping to shape a better tomorrow together with humanity.",
+        "tabletSubtitle": "I'm Dou Lihan, fostering justice and harmony for a better tomorrow with humanity.",
         "buttonCandidate": "Meet the Candidate",
         "donateTitle": "Small Donations",
         "donateSubtitle": "Your donation\nfuels the future of every doggy!",

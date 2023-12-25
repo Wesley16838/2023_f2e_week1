@@ -25,6 +25,10 @@ h1 {
 
 h2 {
     font-size: $text-h2;
+
+    @include devices(tablet) {
+        font-size: $text-h3;
+    }
 }
 
 h3 {
@@ -33,6 +37,10 @@ h3 {
 
 h4 {
     font-size: $text-h4;
+
+    @include devices(tablet) {
+        font-size: $text-h5;
+    }
 }
 
 h5 {

@@ -8,8 +8,12 @@
         width: 900px;
     }
 
-    @include devices(tablet) {
+    @include devices(largelaptop) {
         width: 700px;
+    }
+
+    @include devices(tablet) {
+        width: 100%;
     }
 }
 
@@ -22,6 +26,14 @@
         height: 660px;
     }
 
+    @include devices(largelaptop) {
+        height: 550px;
+    }
+
+    @include devices(tablet) {
+        height: 800px;
+    }
+
     .titleImage {
         width: 578px;
         height: 192px;
@@ -30,17 +42,49 @@
             width: 421.45px;
             height: 140px;
         }
+
+        @include devices(largelaptop) {
+            width: 316px;
+            height: 105px;
+        }
     }
 
     .title-wrapper {
         position: absolute;
-        z-index: 1;
+        z-index: 5;
         left: 0;
         top: 280px;
         @include flex($direction: column, $justify: flex-start, $align: flex-start, $gap: $space-4);
 
         @include devices(extralargedesktop) {
             top: 200px;
+        }
+
+        @include devices(largelaptop) {
+            top: 150px;
+            gap: 16px
+        }
+
+        @include devices(tablet) {
+            top: 110px;
+            left: 25px;
+            width: calc(100% - 50px);
+        }
+
+        .non-tablet-subtitle {
+            display: block;
+
+            @include devices(tablet) {
+                display: none;
+            }
+        }
+
+        .tablet-subtitle {
+            display: none;
+
+            @include devices(tablet) {
+                display: block;
+            }
         }
     }
 
@@ -55,6 +99,15 @@
         @include devices(extralargedesktop) {
             width: 494px;
             height: 600px;
+        }
+
+        @include devices(largelaptop) {
+            height: 450px;
+            width: 370.5px;
+        }
+
+        @include devices(tablet) {
+            display: none;
         }
     }
 
@@ -72,11 +125,56 @@
             left: 275px;
             top: 425px;
         }
+
+        @include devices(largelaptop) {
+            width: 100px;
+            height: 100px;
+            top: 330px;
+            left: 240px;
+        }
+
+        @include devices(tablet) {
+            display: none;
+        }
+    }
+
+    .tablet-donate-dog-white {
+        display: none;
+
+        @include devices(tablet) {
+            display: block;
+            position: absolute;
+            left: 25px;
+            bottom: 32px;
+            z-index: 4;
+        }
+    }
+
+    .tablet-donate-dog {
+        display: none;
+
+        @include devices(tablet) {
+            display: block;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            z-index: 3;
+        }
+    }
+
+    .tablet-donate-dog-bg {
+        display: none;
+
+        @include devices(tablet) {
+            display: block;
+            position: absolute;
+            left: 0px;
+            bottom: 0px
+        }
     }
 }
 
 .section-two {
-
     display: grid;
     grid-template-columns: 630px 438px;
     column-gap: 62px;
@@ -94,6 +192,15 @@
         row-gap: 20px;
     }
 
+    @include devices(largelaptop) {
+        @include flex($direction: column, $align: stretch, $gap: 32px);
+    }
+
+    @include devices(tablet) {
+        padding-inline: 25px;
+        padding-top: 40px;
+    }
+
     .donate {
         height: 288px;
         grid-area: donate;
@@ -108,6 +215,10 @@
         @include devices(extralargedesktop) {
             height: 100%;
             padding: 30px 20px;
+        }
+
+        @include devices(tablet) {
+            gap: 16px;
         }
 
         .donate-content {
@@ -127,6 +238,11 @@
             @include devices(extralargedesktop) {
                 height: 150px;
                 width: 108px;
+                display: block;
+            }
+
+            @include devices(tablet) {
+                display: none;
             }
         }
 
@@ -140,6 +256,12 @@
                 bottom: 35px;
                 right: 20px;
             }
+
+            @include devices(tablet) {
+                position: static;
+            }
+
+
         }
     }
 
@@ -181,6 +303,14 @@
     width: 100%;
     height: 310px;
     position: relative;
+    background-image: url('/assets/images/dog-banner.png');
+    background-position: center right -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include devices(tablet) {
+        height: 156px;
+    }
 
     >div {
         position: unset !important;
@@ -205,6 +335,32 @@
         @include devices(extralargedesktop) {
             left: calc((100% - 900px)/2);
         }
+
+        @include devices(largelaptop) {
+            display: none;
+        }
+    }
+
+    .slogan-image-small {
+        @include devices(extralargedesktop) {
+            display: none;
+        }
+
+        @include devices(largelaptop) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            left: calc((100% - 700px)/2);
+            display: block;
+        }
+
+        @include devices(tablet) {
+            width: 143px;
+            height: 54px;
+            left: 25px;
+        }
+
     }
 }
 
@@ -215,8 +371,18 @@
     padding-bottom: 209px;
     @include flex();
 
+    @include devices(tablet) {
+        padding-inline: 25px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
     .issue-four-wrapper {
-        @include flex($direction: column, $align: flex-start, $gap: $space-4)
+        @include flex($direction: column, $align: flex-start, $gap: $space-4);
+
+        @include devices(tablet) {
+            @include flex($direction: row, $justify: flex-start, $gap: $space-4);
+        }
     }
 
     .issue-wrapper {
@@ -230,6 +396,16 @@
             width: 900px;
         }
 
+        @include devices(largelaptop) {
+            width: 700px;
+        }
+
+        @include devices(tablet) {
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+
         .issue-container {
             height: 309px;
             border: none;
@@ -240,6 +416,10 @@
             @include devices(extralargedesktop) {
                 padding: 20px;
                 box-sizing: border-box;
+            }
+
+            @include devices(tablet) {
+                height: 181px;
             }
 
             h4 {
@@ -258,10 +438,18 @@
     background-color: transparent;
     @include flex();
 
+    @include devices(tablet) {
+        margin-top: 0px;
+    }
+
     .gallery-container {
         position: absolute;
         left: 0px;
         top: -248px;
+
+        @include devices(tablet) {
+            top: -40px;
+        }
     }
 
     .gallery-item {
@@ -277,11 +465,25 @@
         height: auto;
         border-radius: 8px;
         /* Optional: Add border-radius for rounded corners */
+
+        @include devices(tablet) {
+            width: 80px;
+            height: 80px;
+        }
     }
 
     .contact-form {
         width: 783px;
         margin-top: 60px;
+
+        @include devices(largelaptop) {
+            width: 700px;
+        }
+
+        @include devices(tablet) {
+            width: calc(100% - 50px);
+            margin-top: 84px;
+        }
 
         h2 {
             margin-bottom: $space-4;
@@ -307,10 +509,20 @@
             .form-row {
                 @include flex($gap: $space-4, $align: flex-start);
 
+                @include devices(tablet) {
+                    justify-content: flex-start;
+                    width: 100%;
+                    gap: $space-2;
+                }
+
                 label {
                     width: 90px;
                     position: relative;
                     top: 12px;
+
+                    @include devices(tablet) {
+                        width: 74px;
+                    }
                 }
 
                 input {
@@ -325,6 +537,10 @@
                         font-size: $text-button;
                         color: $gray70;
                     }
+
+                    @include devices(tablet) {
+                        width: calc(100% - 82px);
+                    }
                 }
 
                 textarea {
@@ -334,6 +550,14 @@
                     box-sizing: border-box;
                     border: 1px solid $gray70;
                     font-size: $text-button;
+
+                    @include devices(largelaptop) {
+                        width: 586px;
+                    }
+
+                    @include devices(tablet) {
+                        width: calc(100% - 82px);
+                    }
 
                     &::placeholder {
                         font-size: $text-button;

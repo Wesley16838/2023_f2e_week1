@@ -58,6 +58,11 @@
         color: $black;
         border: 1px solid $black;
     }
+
+    @include devices(tablet) {
+        padding: 6px 20px;
+        font-size: $text-footnote-s;
+    }
 }
 
 .text {

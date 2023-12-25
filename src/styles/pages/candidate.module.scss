@@ -3,9 +3,9 @@
 .candidate-wrapper {
     width: 100vw;
     background-image: url('/assets/images/candidate-dog.png');
-    background-position: right;
+    background-position: left;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-attachment: fixed;
     @include flex($align: flex-start);
 }
@@ -23,5 +23,9 @@
 
     @include devices(extralargedesktop) {
         width: 900px;
+    }
+
+    @include devices(largelaptop) {
+        width: 700px;
     }
 }

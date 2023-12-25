@@ -8,7 +8,8 @@ const Footer = ({ data }: FooterProps) => {
             <p className="footnote">{data && data.global.footer.copyright}</p>
             <div className={styles["contact-wrapper"]}>
                 <p className="footnote">{data && data.global.footer.address}</p>
-                <p className="footnote">{data && data.global.footer.contact}</p>
+                <p className={styles["tablet-contact"]}>{data && data.global.footer.contact}</p>
+                <p className={styles["non-tablet-contact"]}>{data && data.global.footer.tabletContact}</p>
             </div>
 
         </div>

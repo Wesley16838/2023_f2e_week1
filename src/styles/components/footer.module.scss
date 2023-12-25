@@ -8,11 +8,33 @@
     box-sizing: border-box;
     @include flex($justify: space-between, $align: flex-end);
 
+    @include devices(largelaptop) {
+        padding: 24px 32px;
+    }
+
+
     .contact-wrapper {
-        @include flex($justify: flex-start);
+        @include flex($justify: flex-start, $align: flex-start);
 
         @include devices(extralargedesktop) {
             flex-direction: column;
+        }
+
+        .tablet-contact {
+            display: block;
+
+            @include devices(tablet) {
+                display: none;
+            }
+        }
+
+        .non-tablet-contact {
+            display: none;
+
+            @include devices(tablet) {
+                display: block;
+                font-size: 15px;
+            }
         }
     }
 
@@ -21,6 +43,10 @@
         margin-block: 0px;
         padding-left: 0px;
         @include flex($gap: 20px, $justify: flex-start);
+
+        @include devices(largelaptop) {
+            display: none;
+        }
 
         li a {
             color: $gray30;

@@ -18,6 +18,10 @@
         width: 900px;
     }
 
+    @include devices(largelaptop) {
+        width: 700px;
+    }
+
     .title {
         margin-bottom: $space-5;
     }
@@ -43,6 +47,11 @@
         width: 900px;
         gap: 25px;
     }
+
+    @include devices(largelaptop) {
+        width: 700px;
+        flex-wrap: wrap;
+    }
 }
 
 .option-container {
@@ -52,6 +61,10 @@
     border-radius: $space-3;
     background-color: #FFFFFFCC;
     @include flex($direction: column, $gap: $space-3);
+
+    @include devices(largelaptop) {
+        width: 48%;
+    }
 
     .option-inner-container {
         height: 57px;

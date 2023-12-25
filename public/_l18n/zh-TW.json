@@ -25,13 +25,15 @@
         "footer": {
             "copyright": "2023 鬥立翰 版權所有。",
             "address": "辦公室地址｜毛孩區，毛茸茸大道99號，狗狗大厦99樓",
-            "contact": "Tel｜(02) 888-5678　Email｜dogoffice@doglihan.tw"
+            "contact": "Tel｜(02) 888-5678　Email｜dogoffice@doglihan.tw",
+            "tabletContact": "Tel｜(02) 888-5678\nEmail｜dogoffice@doglihan.tw"
         }
     },
     "homepage": {
         "pageTitle": "立委競選官網",
         "title": "堅如鬥牛，捍衛台灣未來!",
         "subtitle": "我是鬥立翰，堅守正義、追求共融，\n望與人類共同塑造更美好的明天。",
+        "tabletSubtitle": "我是鬥立翰，堅守正義、追求共融，望與人類共同塑造更美好的明天。",
         "buttonCandidate": "認識候選人",
         "donateTitle": "小額捐款",
         "donateSubtitle": "您的小筆捐款，\n是每隻毛孩未來的大大動力！",

@@ -14,6 +14,14 @@
     position: relative;
     @include flex($direction: column, $align: flex-start);
 
+    @include devices(largelaptop) {
+        padding-inline: 30px;
+
+        h2 {
+            font-size: 28px;
+        }
+    }
+
     h4 {
         margin-bottom: $space-3;
         color: $primary;
@@ -32,6 +40,10 @@
         list-style: none;
         padding: 0px;
         margin-top: $space-7;
+
+        @include devices(largelaptop) {
+            margin-top: $space-4;
+        }
 
         .list-item {
             padding-bottom: $space-3;

@@ -24,6 +24,14 @@
             @include devices(extralargedesktop) {
                 display: none;
             }
+
+            @include devices(largelaptop) {
+                display: block;
+            }
+
+            @include devices(tablet) {
+                display: none;
+            }
         }
     }
 
