@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer';
+import Image from 'next/image'
 import Nav from '@/components/Nav';
 import useFetch from '@/hooks/useFetch';
 import styles from '@/styles/pages/candidate.module.scss'
@@ -11,6 +12,9 @@ const CandidatePage = () => {
     return <div className='bg'>
         <Nav data={data} />
         <div className={styles["candidate-wrapper"]}>
+            <div className={styles['tablet-candidate-image']}>
+                <Image src="/assets/icons/donate-dog.svg" width={80} height={80} alt="Logo" />
+            </div>
             <div className={styles["introduction-wrapper"]}>
                 <div className={styles["introduction-container"]}>
                     <h2>{data && data.candidatepage.title}</h2>

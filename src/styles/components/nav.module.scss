@@ -239,4 +239,12 @@
         background-color: #FFFFFFE5;
         padding-block: 8px;
     }
+
+    img {
+        display: none;
+
+        @include devices(tablet) {
+            display: block;
+        }
+    }
 }

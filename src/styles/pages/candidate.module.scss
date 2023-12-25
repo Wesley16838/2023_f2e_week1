@@ -8,13 +8,42 @@
     background-size: cover;
     background-attachment: fixed;
     @include flex($align: flex-start);
+
+    @include devices(tablet) {
+        background-image: none
+    }
+
+    .tablet-candidate-image {
+        display: none;
+
+        @include devices(tablet) {
+            position: relative;
+            display: block;
+            width: 100vw;
+            height: 381px;
+            background-image: url('/assets/images/tablet-candidate-dog.png');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            img {
+                position: absolute;
+                bottom: -40px;
+                right: 25px;
+            }
+        }
+    }
 }
 
 .introduction-container {
     width: 322px;
     margin-top: 200px;
     margin-bottom: 74px;
-    @include flex($direction: column, $align: flex-start, $gap: $space-5)
+    @include flex($direction: column, $align: flex-start, $gap: $space-5);
+
+    @include devices(tablet) {
+        margin-top: 48px;
+    }
 }
 
 .introduction-wrapper {
@@ -27,5 +56,10 @@
 
     @include devices(largelaptop) {
         width: 700px;
+    }
+
+    @include devices(tablet) {
+        width: 100%;
+        padding-inline: 25px;
     }
 }
