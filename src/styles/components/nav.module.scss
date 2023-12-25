@@ -58,9 +58,6 @@
 
     @include devices(tablet) {
         display: block;
-        position: absolute;
-        top: 21px;
-        right: 25px;
     }
 }
 
@@ -224,4 +221,22 @@
 
 .menuToggle input:checked~.ig-logo {
     right: 5px;
+}
+
+.tablet-nav {
+    width: 100%;
+    padding-inline: 25px;
+    padding-block: 16px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    box-sizing: border-box;
+    transition: 0.5s ease;
+    @include flex($justify: space-between);
+
+    &.scrolled {
+        background-color: #FFFFFFE5;
+        padding-block: 8px;
+    }
 }

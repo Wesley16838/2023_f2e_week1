@@ -12,6 +12,10 @@
         padding: 24px 32px;
     }
 
+    @include devices(tablet) {
+        padding: 40px 25px;
+    }
+
 
     .contact-wrapper {
         @include flex($justify: flex-start, $align: flex-start);

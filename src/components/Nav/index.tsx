@@ -41,8 +41,12 @@ const Nav = ({ data }: NavProps) => {
     }, [addCurrentLocale])
 
     const handleOnSwitchLanguage = (val: Locale) => {
-        addCurrentLocale(val)
-        router.push(router.pathname, router.pathname, { locale: val })
+        if (isMenuOpened) setMenuOpened(!isMenuOpened)
+        setTimeout(function () {
+            addCurrentLocale(val)
+            router.push(router.pathname, router.pathname, { locale: val })
+        }, isMenuOpened ? 150 : 0);
+
     }
 
     useEffect(() => {
@@ -71,25 +75,37 @@ const Nav = ({ data }: NavProps) => {
             <Button type={ButtonTheme.Text} onClick={() => handleOnSwitchLanguage(Locale.zhTW)} name={'中文'} />
         </div>
     </div>
-        <nav role="navigation" className={styles['nav']}>
-            <div className={styles['menuToggle']}>
-                <input type="checkbox" onClick={() => {
-                    setMenuOpened(!isMenuOpened);
-                }} />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul className={styles['menu']}>
-                    {
-                        data && data.global.nav.map((option: NavOptionsProp) => {
-                            return <li key={option.name}><Link href={option.routeName} locale={currentLocale}>{option.name}</Link></li>
-                        })
-                    }
-                </ul>
-                <Image src="/assets/icons/fb.svg" width={32} height={32} alt="FB Logo" className={styles['fb-logo']} />
-                <Image src="/assets/icons/ig.svg" width={32} height={32} alt="IG Logo" className={styles['ig-logo']} />
-            </div>
-        </nav>
+        <div className={`${styles['tablet-nav']} ${scrolled ? styles['scrolled'] : ""}`}>
+            <Image src="/assets/icons/logo.svg" width={28} height={39} alt="Tablet Logo" />
+            <nav role="navigation" className={styles['nav']}>
+                <div className={styles['menuToggle']}>
+                    <input type="checkbox" onClick={() => {
+                        setMenuOpened(!isMenuOpened);
+                    }} checked={isMenuOpened} />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul className={styles['menu']}>
+                        {
+                            data && data.global.nav.map((option: NavOptionsProp) => {
+                                return <li key={option.name}><Link href={option.routeName} locale={currentLocale}>{option.name}</Link></li>
+                            })
+                        }
+                        <li>
+                            <div className={styles['locale-wrapper']}>
+                                <Image src="/assets/icons/language-switch.svg" width={24} height={24} alt="Logo" />
+                                <Button type={ButtonTheme.Text} onClick={() => handleOnSwitchLanguage(Locale.enUS)} name={'English'} />
+                                <div className={styles['vertical-line']}></div>
+                                <Button type={ButtonTheme.Text} onClick={() => handleOnSwitchLanguage(Locale.zhTW)} name={'中文'} />
+                            </div>
+                        </li>
+                    </ul>
+                    <Image src="/assets/icons/fb.svg" width={32} height={32} alt="FB Logo" className={styles['fb-logo']} />
+                    <Image src="/assets/icons/ig.svg" width={32} height={32} alt="IG Logo" className={styles['ig-logo']} />
+                </div>
+            </nav>
+        </div>
+
     </>
 }
 
