@@ -166,7 +166,7 @@
     height: 100vh;
     margin: 0px;
     left: 50px;
-    top: -21px;
+    top: -24px;
     background: #6386D1;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -187,6 +187,11 @@
     a {
         text-align: center;
         color: $white
+    }
+
+    button {
+        text-decoration: none;
+        color: $black;
     }
 }
 

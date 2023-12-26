@@ -7,6 +7,12 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: contain;
+
+    @include devices(tablet) {
+        min-height: 166px;
+        background-image: url('/assets/images/event-bg-tablet.png');
+    }
+
 }
 
 .event-wrapper {
@@ -20,6 +26,11 @@
 
     @include devices(largelaptop) {
         width: 700px;
+    }
+
+    @include devices(tablet) {
+        margin-inline: 25px;
+        width: 100%;
     }
 }
 

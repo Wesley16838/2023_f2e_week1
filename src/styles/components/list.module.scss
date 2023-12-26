@@ -1,5 +1,54 @@
 @import '../abstracts/_abstract-dir';
 
+.eventpage-list-wrapper {
+    .list-container {
+        @include flex($wrap: nowrap, $gap: 30px, $justify: flex-start, $direction: column);
+
+        h3 {
+            margin-bottom: $space-2;
+        }
+
+        h5 {
+            margin-bottom: $space-1;
+        }
+
+        h3,
+        h5 {
+            font-family: 'NotoSansTC-Bold';
+            font-weight: 700;
+
+            @include devices(tablet) {
+                font-size: 22px;
+            }
+        }
+
+        .simple-event {
+            display: block;
+
+            @include devices(extralargedesktop) {
+                display: none;
+            }
+
+            @include devices(largelaptop) {
+                display: block;
+            }
+
+            @include devices(tablet) {
+                display: none;
+            }
+        }
+    }
+
+    .line {
+        margin-block: $space-4;
+        border-bottom: 1px solid $black;
+
+        @include devices(tablet) {
+            margin-block: $space-6;
+        }
+    }
+}
+
 .list-wrapper {
     .list-container {
         @include flex($wrap: nowrap, $gap: 30px, $justify: flex-start);

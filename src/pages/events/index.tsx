@@ -15,7 +15,7 @@ const EventsPage = () => {
         <div className={styles["event-banner"]}></div>
         <div className={styles["event-wrapper"]}>
             {
-                <List data={eventData} title={data && data.homepage.eventListTitle} isFullType={true} />
+                <List data={eventData} title={data && data.homepage.eventListTitle} isFullType={true} isEventPage={true} />
 
             }
         </div>

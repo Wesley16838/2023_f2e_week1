@@ -21,6 +21,7 @@ export type ListProp = {
     title?: string,
     data: EventProp[],
     isFullType: boolean,
+    isEventPage?: boolean,
 }
 
 export type FooterProps = {
