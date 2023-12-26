@@ -7,6 +7,11 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: contain;
+
+    @include devices(tablet) {
+        min-height: 166px;
+        background-image: url('/assets/images/tablet-donations-dog.png');
+    }
 }
 
 .donations-wrapper {
@@ -22,12 +27,21 @@
         width: 700px;
     }
 
+    @include devices(tablet) {
+        width: 100%;
+        margin-inline: 25px;
+    }
+
     .title {
         margin-bottom: $space-5;
     }
 
     .subtitle {
         margin-bottom: $space-7;
+
+        @include devices(tablet) {
+            margin-bottom: $space-5;
+        }
     }
 
     .action {
@@ -52,6 +66,11 @@
         width: 700px;
         flex-wrap: wrap;
     }
+
+    @include devices(tablet) {
+        gap: $space-2;
+    }
+
 }
 
 .option-container {
@@ -64,6 +83,10 @@
 
     @include devices(largelaptop) {
         width: 48%;
+    }
+
+    @include devices(tablet) {
+        width: 100%;
     }
 
     .option-inner-container {
