@@ -4,9 +4,10 @@
     width: 100vw;
     min-height: 282px;
     background-image: url('/assets/images/event-bg.png');
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @include devices(tablet) {
         min-height: 166px;

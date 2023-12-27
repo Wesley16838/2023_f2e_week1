@@ -2,7 +2,11 @@
 
 .eventpage-list-wrapper {
     .list-container {
-        @include flex($wrap: nowrap, $gap: 30px, $justify: flex-start, $direction: column);
+        @include flex($wrap: nowrap, $gap: 30px, $justify: flex-start);
+
+        @include devices(tablet) {
+            flex-direction: column;
+        }
 
         h3 {
             margin-bottom: $space-2;

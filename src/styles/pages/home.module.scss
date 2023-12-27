@@ -304,12 +304,16 @@
     height: 310px;
     position: relative;
     background-image: url('/assets/images/dog-banner.png');
-    background-position: center right -100px;
+
     background-size: cover;
     background-repeat: no-repeat;
 
     @include devices(tablet) {
         height: 156px;
+    }
+
+    @include devices(mobile) {
+        background-position: center right -100px;
     }
 
     >div {
@@ -337,14 +341,17 @@
         }
 
         @include devices(largelaptop) {
+            left: calc((100% - 700px)/2);
+            display: block;
+        }
+
+        @include devices(tablet) {
             display: none;
         }
     }
 
     .slogan-image-small {
-        @include devices(extralargedesktop) {
-            display: none;
-        }
+        display: none;
 
         @include devices(largelaptop) {
             position: absolute;
@@ -352,13 +359,14 @@
             transform: translateY(-50%);
             z-index: 2;
             left: calc((100% - 700px)/2);
-            display: block;
+            display: none;
         }
 
         @include devices(tablet) {
             width: 143px;
             height: 54px;
             left: 25px;
+            display: block;
         }
 
     }
@@ -378,9 +386,11 @@
     }
 
     .issue-four-wrapper {
+
         @include flex($direction: column, $align: flex-start, $gap: $space-4);
 
         @include devices(tablet) {
+            width: 100%;
             @include flex($direction: row, $justify: flex-start, $gap: $space-4);
         }
     }
@@ -420,6 +430,8 @@
 
             @include devices(tablet) {
                 height: 181px;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
 
             h4 {
@@ -575,9 +587,20 @@
 
                         &:nth-of-type(2) {
                             width: 154px;
+
+                            @include devices(tablet) {
+                                width: calc(100% - 88px)
+                            }
                         }
                     }
                 }
+            }
+
+            .section-five-phone-wrapper {
+                @include devices(tablet) {
+                    width: calc(100% - 82px);
+                }
+
             }
 
             button {

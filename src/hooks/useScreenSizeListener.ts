@@ -20,6 +20,7 @@ const useScreenSizeListener = () => {
     }, 350); // 
 
     useEffect(() => {
+        if (windowSize.width == undefined) debouncedHandleResize()
         if (typeof window !== 'undefined') {
             // Add event listener on component mount
             window.addEventListener('resize', debouncedHandleResize);

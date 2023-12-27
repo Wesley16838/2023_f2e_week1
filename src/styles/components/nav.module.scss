@@ -238,7 +238,12 @@
     z-index: 10;
     box-sizing: border-box;
     transition: 0.5s ease;
-    @include flex($justify: space-between);
+    display: none;
+
+
+    @include devices(tablet) {
+        @include flex($justify: space-between);
+    }
 
     &.scrolled {
         background-color: #FFFFFFE5;

@@ -123,7 +123,6 @@ export default function Home() {
         <div className={styles["section-three"]}>
           <Image src="/assets/icons/slogan-two.svg" width={553} height={55} className={styles["slogan-image"]} alt="更好的台灣, 一同守護" />
           <Image src="/assets/icons/slogan-two-small.svg" width={286} height={108} className={styles["slogan-image-small"]} alt="更好的台灣, 一同守護" />
-          {/* <Image src="/assets/images/dog-banner.png" fill className={styles["image"]} alt="背景圖片" /> */}
         </div>
         <div className={styles["section-four"]}>
           <div className={styles["issue-four-wrapper"]}>
@@ -180,7 +179,7 @@ export default function Home() {
               </div>
               <div className={`${styles["form-row"]} ${styles["phone"]}`}>
                 <label htmlFor="phonenumber">{data && data.homepage.contactFormMobileInput}</label>
-                <div>
+                <div className={styles["section-five-phone-wrapper"]}>
                   <input
                     id="areanumber"
                     aria-invalid={errors.areanumber ? "true" : "false"}

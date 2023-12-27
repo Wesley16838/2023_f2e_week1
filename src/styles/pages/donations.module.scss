@@ -29,7 +29,7 @@
 
     @include devices(tablet) {
         width: 100%;
-        margin-inline: 25px;
+        padding-inline: 25px;
     }
 
     .title {
@@ -68,6 +68,7 @@
     }
 
     @include devices(tablet) {
+        width: 100%;
         gap: $space-2;
     }
 
