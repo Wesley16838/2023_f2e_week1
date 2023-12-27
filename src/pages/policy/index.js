@@ -15,6 +15,8 @@ import { useSwiper } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
+import useScreenSizeListener from '@/hooks/useScreenSizeListener'
+
 
 class CustomControls extends React.Component {
     static defaultProps = {
@@ -66,12 +68,9 @@ const PolicyPage = () => {
         }
     };
 
-    const handleSlideChange = () => {
+    const { windowSize } = useScreenSizeListener();
 
-        if (swiperWrapperRef.current) swiperWrapperRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    return <><div className={styles["policy-picture-container-wrapper-tablet"]}><Swiper
+    return <>{windowSize.width <= 768 ? <div className={styles["policy-picture-container-wrapper-tablet"]}><Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         navigation
         cssMode={true}
@@ -81,7 +80,6 @@ const PolicyPage = () => {
             // Assign the swiper instance to the ref
             swiperRef.current = swiperInstance;
         }}
-        onSlideChange={handleSlideChange}
     >
         <Nav data={data} />
         {
@@ -111,42 +109,42 @@ const PolicyPage = () => {
         }
         <Footer data={data} />
     </Swiper>
-    </div>
-        <div className={styles["policy-picture-container-wrapper"]}><FullPage controls={CustomControls}>
-            <Nav data={data} />
-            {
-                issueData && issueData.map(
-                    (issue, index) => {
-                        return <Slide style={{
-                            ...baseStyle,
-                        }} key={issue.name}>
-                            <div className={styles["policy-picture-container"]}>
-                                <Image src={issue.fullAsset} width={0}
-                                    height={0} alt={issue.name} layout="fill"
-                                    objectFit="cover" />
-                                <Image src="/assets/icons/policy-slogan.svg" width={192} height={211} alt={'policy slogan'} style={{ position: 'absolute', left: 40, bottom: 146, zIndex: 2 }} />
-                            </div>
-                            <div className={styles["policy-container"]}>
-                                <h4>{data && data.policypage.policy} {index + 1}</h4>
-                                <h2>{issue.name}</h2>
-                                <ul>
-                                    {
-                                        issue.content.map(item => {
-                                            return <div className={styles["list-item"]} key={item}><Image src="/assets/icons/blue-dot.svg" width={12} height={12} alt="blue dot" /><li>{item}</li></div>
-                                        })
-                                    }
-                                </ul>
-                                <Image src={issue.backgroundImage.asset} width={issue.backgroundImage.size.width} height={issue.backgroundImage.size.height} alt={'policy slogan'} style={{ position: 'absolute', right: issue.backgroundImage.position.right, top: issue.backgroundImage.position.top }} />
-                            </div>
+    </div> : <div className={styles["policy-picture-container-wrapper"]}><FullPage controls={CustomControls}>
+        <Nav data={data} />
+        {
+            issueData && issueData.map(
+                (issue, index) => {
+                    return <Slide style={{
+                        ...baseStyle,
+                    }} key={issue.name}>
+                        <div className={styles["policy-picture-container"]}>
+                            <Image src={issue.fullAsset} width={0}
+                                height={0} alt={issue.name} layout="fill"
+                                objectFit="cover" />
+                            <Image src="/assets/icons/policy-slogan.svg" width={192} height={211} alt={'policy slogan'} style={{ position: 'absolute', left: 40, bottom: 146, zIndex: 2 }} />
+                        </div>
+                        <div className={styles["policy-container"]}>
+                            <h4>{data && data.policypage.policy} {index + 1}</h4>
+                            <h2>{issue.name}</h2>
+                            <ul>
+                                {
+                                    issue.content.map(item => {
+                                        return <div className={styles["list-item"]} key={item}><Image src="/assets/icons/blue-dot.svg" width={12} height={12} alt="blue dot" /><li>{item}</li></div>
+                                    })
+                                }
+                            </ul>
+                            <Image src={issue.backgroundImage.asset} width={issue.backgroundImage.size.width} height={issue.backgroundImage.size.height} alt={'policy slogan'} style={{ position: 'absolute', right: issue.backgroundImage.position.right, top: issue.backgroundImage.position.top }} />
+                        </div>
 
-                        </Slide>
-                    }
-                )
-            }
-            <div className={styles["footer-container"]}>
-                <Footer data={data} />
-            </div>
-        </FullPage></div>
+                    </Slide>
+                }
+            )
+        }
+        <div className={styles["footer-container"]}>
+            <Footer data={data} />
+        </div>
+    </FullPage></div>}
+
     </>
 
 }
