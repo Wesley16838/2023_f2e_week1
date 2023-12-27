@@ -87,7 +87,7 @@ const PolicyPage = () => {
         {
             issueData && issueData.map(
                 (issue, index) => {
-                    return <SwiperSlide>
+                    return <SwiperSlide key={'tablet slider' + index}>
                         <div className={styles["policy-picture-container-tablet"]}><Image src={issue.fullAsset} width={0}
                             height={0} alt={issue.name} layout="fill"
                             objectFit="cover" />
