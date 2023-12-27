@@ -1,9 +1,96 @@
 @import '../abstracts/_abstract-dir';
 
+.policy-picture-container-wrapper-tablet {
+
+    display: none;
+
+    @include devices(tablet) {
+        background-color: #D9E8FF;
+        display: block;
+    }
+}
+
+
+.policy-picture-container-wrapper {
+
+    display: block;
+
+    @include devices(tablet) {
+        display: none;
+    }
+}
+
 .policy-picture-container {
     position: relative;
     height: 100vh;
     z-index: 1;
+}
+
+.policy-picture-container-tablet {
+    position: relative;
+    height: 486px;
+    z-index: 1;
+}
+
+.policy-container-tablet {
+    background-color: $blue80;
+    padding: $space-6 $space-4;
+    height: 90;
+    @include flex($direction: column, $align: flex-start, $justify: flex-start);
+
+    h2,
+    h4 {
+        font-size: $text-h3;
+    }
+
+    h4 {
+        margin-bottom: $space-3;
+        color: $primary;
+
+        &::before {
+            background-image: url('/assets/icons/dog-footprint.svg');
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 20px;
+            margin-right: $space-2;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin-top: $space-7;
+
+        @include devices(largelaptop) {
+            margin-top: $space-4;
+        }
+
+        .list-item {
+            padding-bottom: $space-3;
+            @include flex($align: flex-start, $justify: flex-start, $gap: $space-3, $wrap: nowrap);
+
+            li {
+                font-size: $text-p;
+
+            }
+
+            img {
+                position: relative;
+                top: 7px
+            }
+        }
+
+
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: #6386D1;
+        display: flex;
+        align-items: center;
+    }
 }
 
 .policy-container {
@@ -98,4 +185,17 @@
     position: fixed;
     bottom: 0px;
     z-index: 2;
+}
+
+.button-icon-image {
+    display: flex;
+}
+
+.policy-button-wrapper {
+    width: 100%;
+    @include flex($justify: space-between)
+}
+
+.disabled {
+    overflow: hidden;
 }

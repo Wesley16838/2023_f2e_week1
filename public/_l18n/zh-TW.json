@@ -58,7 +58,9 @@
         "contactFormSubmitButton": "送出意見"
     },
     "policypage": {
-        "policy": "政策"
+        "policy": "政策",
+        "nextPolicy": "了解其他政策",
+        "previousPolicy": "前一個政策"
     },
     "candidatepage": {
         "title": "認識鬥立翰",

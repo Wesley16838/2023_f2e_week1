@@ -58,7 +58,9 @@
         "contactFormSubmitButton": "Submit"
     },
     "policypage": {
-        "policy": "Policy"
+        "policy": "Policy",
+        "nextPolicy": "Understand next policies",
+        "previousPolicy": "Previous policy"
     },
     "candidatepage": {
         "title": "Get to know Dog Li-Han",
