@@ -1,613 +1,616 @@
-@import '../abstracts/_abstract-dir';
+@import "../abstracts/_abstract-dir";
 
 .section-one,
 .section-two {
-    width: 1130px;
+  width: 1130px;
 
-    @include devices(extralargedesktop) {
-        width: 900px;
-    }
+  @include devices(extralargedesktop) {
+    width: 900px;
+  }
 
-    @include devices(largelaptop) {
-        width: 700px;
-    }
+  @include devices(largelaptop) {
+    width: 700px;
+  }
 
-    @include devices(tablet) {
-        width: 100%;
-    }
+  @include devices(tablet) {
+    width: 100%;
+  }
 }
 
 .section-one {
-    position: relative;
-    height: 891px;
-    @include flex($direction: column, $justify: flex-start, $align: flex-start);
+  position: relative;
+  height: 891px;
+  @include flex($direction: column, $justify: flex-start, $align: flex-start);
+
+  @include devices(extralargedesktop) {
+    height: 660px;
+  }
+
+  @include devices(largelaptop) {
+    height: 550px;
+  }
+
+  @include devices(tablet) {
+    height: 800px;
+  }
+
+  .titleImage {
+    width: 578px;
+    height: 192px;
 
     @include devices(extralargedesktop) {
-        height: 660px;
+      width: 421.45px;
+      height: 140px;
     }
 
     @include devices(largelaptop) {
-        height: 550px;
+      width: 316px;
+      height: 105px;
+    }
+  }
+
+  .title-wrapper {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 280px;
+    @include flex(
+      $direction: column,
+      $justify: flex-start,
+      $align: flex-start,
+      $gap: $space-4
+    );
+
+    @include devices(extralargedesktop) {
+      top: 200px;
+    }
+
+    @include devices(largelaptop) {
+      top: 150px;
+      gap: 16px;
     }
 
     @include devices(tablet) {
-        height: 800px;
+      top: 110px;
+      left: 25px;
+      width: calc(100% - 50px);
     }
 
-    .titleImage {
-        width: 578px;
-        height: 192px;
+    .non-tablet-subtitle {
+      display: block;
 
-        @include devices(extralargedesktop) {
-            width: 421.45px;
-            height: 140px;
-        }
-
-        @include devices(largelaptop) {
-            width: 316px;
-            height: 105px;
-        }
-    }
-
-    .title-wrapper {
-        position: absolute;
-        z-index: 5;
-        left: 0;
-        top: 280px;
-        @include flex($direction: column, $justify: flex-start, $align: flex-start, $gap: $space-4);
-
-        @include devices(extralargedesktop) {
-            top: 200px;
-        }
-
-        @include devices(largelaptop) {
-            top: 150px;
-            gap: 16px
-        }
-
-        @include devices(tablet) {
-            top: 110px;
-            left: 25px;
-            width: calc(100% - 50px);
-        }
-
-        .non-tablet-subtitle {
-            display: block;
-
-            @include devices(tablet) {
-                display: none;
-            }
-        }
-
-        .tablet-subtitle {
-            display: none;
-
-            @include devices(tablet) {
-                display: block;
-            }
-        }
-    }
-
-    .homepage-dog {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        z-index: 0;
-        width: 668px;
-        height: 811px;
-
-        @include devices(extralargedesktop) {
-            width: 494px;
-            height: 600px;
-        }
-
-        @include devices(largelaptop) {
-            height: 450px;
-            width: 370.5px;
-        }
-
-        @include devices(tablet) {
-            display: none;
-        }
-    }
-
-    .donate-dog {
-        position: absolute;
-        left: 285px;
-        top: 600px;
-        z-index: 2;
-        width: 197px;
-        height: 197px;
-
-        @include devices(extralargedesktop) {
-            width: 145px;
-            height: 145px;
-            left: 275px;
-            top: 425px;
-        }
-
-        @include devices(largelaptop) {
-            width: 100px;
-            height: 100px;
-            top: 330px;
-            left: 240px;
-        }
-
-        @include devices(tablet) {
-            display: none;
-        }
-    }
-
-    .tablet-donate-dog-white {
+      @include devices(tablet) {
         display: none;
-
-        @include devices(tablet) {
-            display: block;
-            position: absolute;
-            left: 25px;
-            bottom: 32px;
-            z-index: 4;
-        }
+      }
     }
 
-    .tablet-donate-dog {
-        display: none;
+    .tablet-subtitle {
+      display: none;
 
-        @include devices(tablet) {
-            display: block;
-            position: absolute;
-            right: 0px;
-            bottom: 0px;
-            z-index: 3;
-        }
+      @include devices(tablet) {
+        display: block;
+      }
+    }
+  }
+
+  .homepage-dog {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+    width: 668px;
+    height: 811px;
+
+    @include devices(extralargedesktop) {
+      width: 494px;
+      height: 600px;
     }
 
-    .tablet-donate-dog-bg {
-        display: none;
-
-        @include devices(tablet) {
-            display: block;
-            position: absolute;
-            left: 0px;
-            bottom: 0px
-        }
+    @include devices(largelaptop) {
+      height: 450px;
+      width: 370.5px;
     }
+
+    @include devices(tablet) {
+      display: none;
+    }
+  }
+
+  .donate-dog {
+    position: absolute;
+    left: 285px;
+    top: 600px;
+    z-index: 2;
+    width: 197px;
+    height: 197px;
+
+    @include devices(extralargedesktop) {
+      width: 145px;
+      height: 145px;
+      left: 275px;
+      top: 425px;
+    }
+
+    @include devices(largelaptop) {
+      width: 100px;
+      height: 100px;
+      top: 330px;
+      left: 240px;
+    }
+
+    @include devices(tablet) {
+      display: none;
+    }
+  }
+
+  .tablet-donate-dog-white {
+    display: none;
+
+    @include devices(tablet) {
+      display: block;
+      position: absolute;
+      left: 25px;
+      bottom: 32px;
+      z-index: 4;
+    }
+  }
+
+  .tablet-donate-dog {
+    display: none;
+
+    @include devices(tablet) {
+      display: block;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      z-index: 3;
+    }
+  }
+
+  .tablet-donate-dog-bg {
+    display: none;
+
+    @include devices(tablet) {
+      display: block;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+    }
+  }
 }
 
 .section-two {
-    display: grid;
-    grid-template-columns: 630px 438px;
-    column-gap: 62px;
-    row-gap: 32px;
-    grid-template-rows: 288px 217px;
-    grid-template-areas:
-        "donate event"
-        "introduction event";
-    margin-bottom: $space-7;
+  display: grid;
+  grid-template-columns: 630px 438px;
+  column-gap: 62px;
+  row-gap: 32px;
+  grid-template-rows: 288px 217px;
+  grid-template-areas:
+    "donate event"
+    "introduction event";
+  margin-bottom: $space-7;
+
+  @include devices(extralargedesktop) {
+    grid-template-columns: 500px 360px;
+    grid-template-rows: 207px 249px;
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+
+  @include devices(largelaptop) {
+    @include flex($direction: column, $align: stretch, $gap: 32px);
+  }
+
+  @include devices(tablet) {
+    padding-inline: 25px;
+    padding-top: 40px;
+  }
+
+  .donate {
+    height: 288px;
+    grid-area: donate;
+    background-color: $white;
+    border: none;
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    position: relative;
+    @include flex($justify: space-between, $align: flex-end);
 
     @include devices(extralargedesktop) {
-        grid-template-columns: 500px 360px;
-        grid-template-rows: 207px 249px;
-        column-gap: 40px;
-        row-gap: 20px;
-    }
-
-    @include devices(largelaptop) {
-        @include flex($direction: column, $align: stretch, $gap: 32px);
+      height: 100%;
+      padding: 30px 20px;
     }
 
     @include devices(tablet) {
-        padding-inline: 25px;
-        padding-top: 40px;
+      gap: 16px;
     }
 
-    .donate {
-        height: 288px;
-        grid-area: donate;
-        background-color: $white;
-        border: none;
-        border-radius: 20px;
-        padding: 60px 40px;
-        box-sizing: border-box;
+    .donate-content {
+      @include flex($direction: column, $gap: $space-4, $align: flex-start);
+
+      @include devices(extralargedesktop) {
+        gap: $space-3;
+      }
+    }
+
+    .orange-logo {
+      position: absolute;
+      bottom: 24px;
+      right: 135px;
+      z-index: 0;
+
+      @include devices(extralargedesktop) {
+        height: 150px;
+        width: 108px;
+        display: block;
+      }
+
+      @include devices(tablet) {
+        display: none;
+      }
+    }
+
+    .donate-button-wrapper {
+      position: absolute;
+      bottom: 60px;
+      right: 40px;
+      z-index: 1;
+
+      @include devices(extralargedesktop) {
+        bottom: 35px;
+        right: 20px;
+      }
+
+      @include devices(tablet) {
+        position: static;
+      }
+    }
+  }
+
+  .event {
+    height: 100%;
+    grid-area: event;
+  }
+
+  .introduction-wrapper {
+    height: 100%;
+    grid-area: introduction;
+    @include flex(
+      $direction: column,
+      $gap: 8px,
+      $justify: flex-start,
+      $align: flex-start
+    );
+
+    .name-wrapper {
+      color: $primary;
+      @include flex($align: flex-end, $justify: flex-start, $gap: 10px);
+
+      .name {
+        font-size: 28px;
+        font-weight: 900;
+      }
+
+      .name-alt {
+        font-size: $text-button;
+        font-weight: $normal;
         position: relative;
-        @include flex($justify: space-between, $align: flex-end);
-
-        @include devices(extralargedesktop) {
-            height: 100%;
-            padding: 30px 20px;
-        }
-
-        @include devices(tablet) {
-            gap: 16px;
-        }
-
-        .donate-content {
-            @include flex($direction: column, $gap: $space-4, $align: flex-start);
-
-            @include devices(extralargedesktop) {
-                gap: $space-3
-            }
-        }
-
-        .orange-logo {
-            position: absolute;
-            bottom: 24px;
-            right: 135px;
-            z-index: 0;
-
-            @include devices(extralargedesktop) {
-                height: 150px;
-                width: 108px;
-                display: block;
-            }
-
-            @include devices(tablet) {
-                display: none;
-            }
-        }
-
-        .donate-button-wrapper {
-            position: absolute;
-            bottom: 60px;
-            right: 40px;
-            z-index: 1;
-
-            @include devices(extralargedesktop) {
-                bottom: 35px;
-                right: 20px;
-            }
-
-            @include devices(tablet) {
-                position: static;
-            }
-
-
-        }
+        bottom: 4px;
+      }
     }
 
-    .event {
-        height: 100%;
-        grid-area: event;
+    .introduction {
+      font-size: $text-p;
+      line-height: 32px;
     }
-
-    .introduction-wrapper {
-        height: 100%;
-        grid-area: introduction;
-        @include flex($direction: column, $gap: 8px, $justify: flex-start, $align: flex-start);
-
-        .name-wrapper {
-            color: $primary;
-            @include flex($align: flex-end, $justify: flex-start, $gap: 10px);
-
-            .name {
-                font-size: 28px;
-                font-weight: 900;
-            }
-
-            .name-alt {
-                font-size: $text-button;
-                font-weight: $normal;
-                position: relative;
-                bottom: 4px;
-            }
-        }
-
-        .introduction {
-            font-size: $text-p;
-            line-height: 32px;
-        }
-    }
+  }
 }
 
 .section-three {
-    width: 100%;
-    height: 310px;
-    position: relative;
-    background-image: url('/assets/images/dog-banner.png');
+  width: 100%;
+  height: 310px;
+  position: relative;
+  background-image: url("/assets/images/dog-banner.png");
 
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include devices(tablet) {
+    height: 156px;
+  }
+
+  @include devices(mobile) {
+    background-position: center right -100px;
+  }
+
+  > div {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: cover;
+    width: 100% !important;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .slogan-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc((100% - 1130px) / 2);
+    z-index: 2;
+
+    @include devices(extralargedesktop) {
+      left: calc((100% - 900px) / 2);
+    }
+
+    @include devices(largelaptop) {
+      left: calc((100% - 700px) / 2);
+      display: block;
+    }
 
     @include devices(tablet) {
-        height: 156px;
+      display: none;
+    }
+  }
+
+  .slogan-image-small {
+    display: none;
+
+    @include devices(largelaptop) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      left: calc((100% - 700px) / 2);
+      display: none;
     }
 
-    @include devices(mobile) {
-        background-position: center right -100px;
+    @include devices(tablet) {
+      width: 143px;
+      height: 54px;
+      left: 25px;
+      display: block;
     }
-
-    >div {
-        position: unset !important;
-    }
-
-    .image {
-        object-fit: cover;
-        width: 100% !important;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .slogan-image {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: calc((100% - 1130px)/2);
-        z-index: 2;
-
-        @include devices(extralargedesktop) {
-            left: calc((100% - 900px)/2);
-        }
-
-        @include devices(largelaptop) {
-            left: calc((100% - 700px)/2);
-            display: block;
-        }
-
-        @include devices(tablet) {
-            display: none;
-        }
-    }
-
-    .slogan-image-small {
-        display: none;
-
-        @include devices(largelaptop) {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
-            left: calc((100% - 700px)/2);
-            display: none;
-        }
-
-        @include devices(tablet) {
-            width: 143px;
-            height: 54px;
-            left: 25px;
-            display: block;
-        }
-
-    }
+  }
 }
 
 .section-four {
-    background-color: $white;
-    width: 100%;
-    padding-top: $space-8;
-    padding-bottom: 209px;
-    @include flex();
+  background-color: $white;
+  width: 100%;
+  padding-top: $space-8;
+  padding-bottom: 209px;
+  @include flex();
+
+  @include devices(tablet) {
+    padding-inline: 25px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  .issue-four-wrapper {
+    @include flex($direction: column, $align: flex-start, $gap: $space-4);
 
     @include devices(tablet) {
-        padding-inline: 25px;
-        padding-top: 40px;
-        padding-bottom: 80px;
+      width: 100%;
+      @include flex($direction: row, $justify: flex-start, $gap: $space-4);
+    }
+  }
+
+  .issue-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: $space-4;
+    width: 1130px;
+
+    @include devices(extralargedesktop) {
+      width: 900px;
     }
 
-    .issue-four-wrapper {
-
-        @include flex($direction: column, $align: flex-start, $gap: $space-4);
-
-        @include devices(tablet) {
-            width: 100%;
-            @include flex($direction: row, $justify: flex-start, $gap: $space-4);
-        }
+    @include devices(largelaptop) {
+      width: 700px;
     }
 
-    .issue-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: $space-4;
-        width: 1130px;
-
-        @include devices(extralargedesktop) {
-            width: 900px;
-        }
-
-        @include devices(largelaptop) {
-            width: 700px;
-        }
-
-        @include devices(tablet) {
-            width: 100%;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-        }
-
-        .issue-container {
-            height: 309px;
-            border: none;
-            border-radius: 20px;
-            background-color: #a4a4a4;
-            @include flex($direction: column, $gap: $space-4);
-
-            @include devices(extralargedesktop) {
-                padding: 20px;
-                box-sizing: border-box;
-            }
-
-            @include devices(tablet) {
-                height: 181px;
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-
-            h4 {
-                text-align: center;
-            }
-        }
+    @include devices(tablet) {
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
     }
 
+    .issue-container {
+      height: 309px;
+      border: none;
+      border-radius: 20px;
+      background-color: #a4a4a4;
+      @include flex($direction: column, $gap: $space-4);
+
+      @include devices(extralargedesktop) {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      @include devices(tablet) {
+        height: 181px;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h4 {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .section-five {
-    position: relative;
-    width: 100%;
-    margin-top: 129px;
-    padding-bottom: $space-7;
-    background-color: transparent;
-    @include flex();
+  position: relative;
+  width: 100%;
+  margin-top: 129px;
+  padding-bottom: $space-7;
+  background-color: transparent;
+  @include flex();
+
+  @include devices(tablet) {
+    margin-top: 0px;
+  }
+
+  .gallery-container {
+    position: absolute;
+    left: 0px;
+    top: -248px;
 
     @include devices(tablet) {
-        margin-top: 0px;
+      top: -40px;
+      width: 100%;
+    }
+  }
+
+  .gallery-item {
+    flex-shrink: 0;
+    margin-right: 20px;
+    /* Adjust margin between images */
+    transition: transform 0.5s ease;
+    /* Add smooth transition effect */
+  }
+
+  .gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Optional: Add border-radius for rounded corners */
+
+    @include devices(tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .contact-form {
+    width: 783px;
+    margin-top: 60px;
+
+    @include devices(largelaptop) {
+      width: 700px;
     }
 
-    .gallery-container {
-        position: absolute;
-        left: 0px;
-        top: -248px;
+    @include devices(tablet) {
+      width: calc(100% - 50px);
+      margin-top: 84px;
+    }
+
+    h2 {
+      margin-bottom: $space-4;
+    }
+
+    p {
+      font-size: $text-p;
+
+      &:nth-child(2) {
+        font-family: "NotoSansTC-Bold";
+        font-weight: 700;
+        margin-bottom: $space-2;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 40px;
+      }
+    }
+
+    form {
+      @include flex($direction: column, $align: flex-start, $gap: $space-2);
+
+      .form-row {
+        @include flex($gap: $space-4, $align: flex-start);
 
         @include devices(tablet) {
-            top: -40px;
+          justify-content: flex-start;
+          width: 100%;
+          gap: $space-2;
         }
-    }
 
-    .gallery-item {
-        flex-shrink: 0;
-        margin-right: 20px;
-        /* Adjust margin between images */
-        transition: transform 0.5s ease;
-        /* Add smooth transition effect */
-    }
+        label {
+          width: 90px;
+          position: relative;
+          top: 12px;
 
-    .gallery-item img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        /* Optional: Add border-radius for rounded corners */
+          @include devices(tablet) {
+            width: 74px;
+          }
+        }
 
+        input {
+          width: 242px;
+          height: 48px;
+          padding: $space-2;
+          box-sizing: border-box;
+          border: 1px solid $gray70;
+          font-size: $text-button;
+
+          &::placeholder {
+            font-size: $text-button;
+            color: $gray70;
+          }
+
+          @include devices(tablet) {
+            width: calc(100% - 82px);
+          }
+        }
+
+        textarea {
+          width: 669px;
+          height: 112px;
+          padding: $space-2;
+          box-sizing: border-box;
+          border: 1px solid $gray70;
+          font-size: $text-button;
+
+          @include devices(largelaptop) {
+            width: 586px;
+          }
+
+          @include devices(tablet) {
+            width: calc(100% - 82px);
+          }
+
+          &::placeholder {
+            font-size: $text-button;
+            color: $gray70;
+          }
+        }
+
+        &.phone {
+          input {
+            &:nth-of-type(1) {
+              width: 80px;
+              margin-right: $space-2;
+            }
+
+            &:nth-of-type(2) {
+              width: 154px;
+
+              @include devices(tablet) {
+                width: calc(100% - 88px);
+              }
+            }
+          }
+        }
+      }
+
+      .section-five-phone-wrapper {
         @include devices(tablet) {
-            width: 80px;
-            height: 80px;
+          width: calc(100% - 82px);
         }
+      }
+
+      button {
+        align-self: flex-end;
+        margin-top: 32px;
+      }
     }
-
-    .contact-form {
-        width: 783px;
-        margin-top: 60px;
-
-        @include devices(largelaptop) {
-            width: 700px;
-        }
-
-        @include devices(tablet) {
-            width: calc(100% - 50px);
-            margin-top: 84px;
-        }
-
-        h2 {
-            margin-bottom: $space-4;
-        }
-
-        p {
-            font-size: $text-p;
-
-            &:nth-child(2) {
-                font-family: 'NotoSansTC-Bold';
-                font-weight: 700;
-                margin-bottom: $space-2;
-            }
-
-            &:nth-child(3) {
-                margin-bottom: 40px;
-            }
-        }
-
-        form {
-            @include flex($direction: column, $align: flex-start, $gap: $space-2);
-
-            .form-row {
-                @include flex($gap: $space-4, $align: flex-start);
-
-                @include devices(tablet) {
-                    justify-content: flex-start;
-                    width: 100%;
-                    gap: $space-2;
-                }
-
-                label {
-                    width: 90px;
-                    position: relative;
-                    top: 12px;
-
-                    @include devices(tablet) {
-                        width: 74px;
-                    }
-                }
-
-                input {
-                    width: 242px;
-                    height: 48px;
-                    padding: $space-2;
-                    box-sizing: border-box;
-                    border: 1px solid $gray70;
-                    font-size: $text-button;
-
-                    &::placeholder {
-                        font-size: $text-button;
-                        color: $gray70;
-                    }
-
-                    @include devices(tablet) {
-                        width: calc(100% - 82px);
-                    }
-                }
-
-                textarea {
-                    width: 669px;
-                    height: 112px;
-                    padding: $space-2;
-                    box-sizing: border-box;
-                    border: 1px solid $gray70;
-                    font-size: $text-button;
-
-                    @include devices(largelaptop) {
-                        width: 586px;
-                    }
-
-                    @include devices(tablet) {
-                        width: calc(100% - 82px);
-                    }
-
-                    &::placeholder {
-                        font-size: $text-button;
-                        color: $gray70;
-                    }
-                }
-
-                &.phone {
-
-                    input {
-                        &:nth-of-type(1) {
-                            width: 80px;
-                            margin-right: $space-2;
-                        }
-
-                        &:nth-of-type(2) {
-                            width: 154px;
-
-                            @include devices(tablet) {
-                                width: calc(100% - 88px)
-                            }
-                        }
-                    }
-                }
-            }
-
-            .section-five-phone-wrapper {
-                @include devices(tablet) {
-                    width: calc(100% - 82px);
-                }
-
-            }
-
-            button {
-                align-self: flex-end;
-                margin-top: 32px;
-            }
-        }
-
-    }
+  }
 }
